@@ -1,3 +1,4 @@
+"use client";
 import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image";

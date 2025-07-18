@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 const whyData = [
@@ -25,7 +26,7 @@ const whyData = [
 
 export default function WhySection() {
   return (
-    <section className="py-20 bg-pink-50">
+    <section className="py-20 bg-pink-50 border-y-2 border-primary-custom">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-semibold text-center mb-16">
           Why Choose Us
