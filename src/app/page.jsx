@@ -2,6 +2,7 @@ import Hiro from "@/components/Hiro";
 import MapBenefitSection from "@/components/MapBenefitSection";
 import Navbar from "@/components/Navbar";
 import ServiceSection from "@/components/ServiceSection";
+import TableSection from "@/components/TableSection";
 import WhySection from "@/components/WhySection";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <ServiceSection />
       <MapBenefitSection />
       <WhySection />
+      <TableSection />
     </div>
   );
 }
