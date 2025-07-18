@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -21,6 +22,12 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const isActivePath = (path) => {
+    return pathname === path;
+  };
+
   return (
     <header className=" backdrop-blur  sticky top-0 z-50">
       <div className="container mx-auto px-8 py-4 flex items-center justify-between">
@@ -33,7 +40,11 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-gray-700 hover:text-pink-600 transition-colors"
+              className={`transition-colors ${
+                isActivePath(item.href)
+                  ? "text-pink-600 font-medium"
+                  : "text-gray-700 hover:text-pink-600"
+              }`}
             >
               {item.label}
             </Link>
@@ -70,7 +81,11 @@ export default function Navbar() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors py-2 px-4 rounded-lg hover:bg-pink-50"
+                    className={`text-lg font-medium py-2 px-4 rounded-lg hover:bg-pink-50 ${
+                      isActivePath(item.href)
+                        ? "text-pink-600 bg-pink-50"
+                        : "text-gray-700 hover:text-pink-600"
+                    }`}
                   >
                     {item.label}
                   </Link>
