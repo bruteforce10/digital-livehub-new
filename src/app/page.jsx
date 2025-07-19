@@ -5,7 +5,30 @@ import MapBenefitSection from "@/components/MapBenefitSection";
 import NewsletterSection from "@/components/Newsletter";
 import ServiceSection from "@/components/ServiceSection";
 import TableSection from "@/components/TableSection";
-import WhySection from "@/components/WhySection";
+import ListSection from "@/components/ListSection";
+
+const whyData = [
+  {
+    icon: "/why/integrated.svg",
+    title: "Integrated Solution",
+    desc: "Logistics + Marketing + Maximum efficiency",
+  },
+  {
+    icon: "/why/local.svg",
+    title: "Local Execution",
+    desc: "No cultural or regulatory barriers",
+  },
+  {
+    icon: "/why/fast.svg",
+    title: "Fast ROI",
+    desc: "Start selling from day one",
+  },
+  {
+    icon: "/why/scale.svg",
+    title: "Scale Support",
+    desc: "Ready for expansion to Malaysia, Singapore, Thailand",
+  },
+];
 
 export default function Home() {
   return (
@@ -19,7 +42,7 @@ export default function Home() {
       />
       <ServiceSection />
       <MapBenefitSection />
-      <WhySection />
+      <ListSection title="Why Choose Us" data={whyData} />
       <TableSection />
       <EndToEndSection />
       <CTASection />
