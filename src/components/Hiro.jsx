@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 export default function Hiro({ title, subtitle, desc, button = true }) {
@@ -24,7 +26,11 @@ export default function Hiro({ title, subtitle, desc, button = true }) {
           <span> {subtitle}</span>
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{desc}</p>
-        {button && <Button variant={"primary"}>GET STARTED</Button>}
+        {button && (
+          <Link href={"/services#packages"}>
+            <Button variant={"primary"}>GET STARTED</Button>
+          </Link>
+        )}
       </div>
     </section>
   );

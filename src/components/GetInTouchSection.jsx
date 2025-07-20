@@ -1,11 +1,62 @@
+"use client";
 import React from "react";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 import Link from "next/link";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "./ui/form";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { toast } from "sonner";
 
-const GetInTouchSection = () => {
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name is required" }),
+  email: z.string().email({ message: "Invalid email address" }),
+  subject: z.string().optional(),
+  message: z.string().min(5, { message: "Message is required" }),
+});
+
+export default function GetInTouchSection() {
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  async function onSubmit(values) {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (res.ok) {
+        toast.success(
+          "Pesan berhasil dikirim! Kami akan segera menghubungi Anda."
+        );
+        form.reset();
+      } else {
+        const data = await res.json();
+        toast.error(data.error || "Terjadi kesalahan saat mengirim pesan.");
+      }
+    } catch (err) {
+      toast.error("Gagal mengirim pesan. Silakan coba lagi nanti.");
+    }
+  }
+
   return (
     <section className="py-20" id="contact">
       <div className="container mx-auto px-4">
@@ -13,8 +64,6 @@ const GetInTouchSection = () => {
         <p className="text-center text-gray-600 mb-16">
           Ready to Be Part of Something Big?
         </p>
-
-        {/* Contact Info */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="flex items-center space-x-3">
             <Phone className="w-5 h-5 text-pink-600" />
@@ -56,32 +105,78 @@ const GetInTouchSection = () => {
             </div>
           </div>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
           <div>
-            <form className="space-y-6">
-              <div>
-                <Input placeholder="Name *" className="w-full" />
-              </div>
-              <div>
-                <Input placeholder="Email *" type="email" className="w-full" />
-              </div>
-              <div>
-                <Input placeholder="Subject" className="w-full" />
-              </div>
-              <div>
-                <Textarea
-                  placeholder="How can we help you? *"
-                  className="w-full h-32"
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Name *" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              <Button className="w-full bg-pink-600 hover:bg-pink-700 text-white py-3">
-                SEND
-              </Button>
-            </form>
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Email *" type="email" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Subject</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Subject" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message *</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="How can we help you? *"
+                          className="w-full h-32"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  className="w-full bg-pink-600 hover:bg-pink-700 text-white py-3"
+                  type="submit"
+                >
+                  SEND
+                </Button>
+              </form>
+            </Form>
           </div>
-
           {/* Map */}
           <div className="bg-gray-100 rounded-lg overflow-hidden h-96">
             <iframe
@@ -98,6 +193,4 @@ const GetInTouchSection = () => {
       </div>
     </section>
   );
-};
-
-export default GetInTouchSection;
+}

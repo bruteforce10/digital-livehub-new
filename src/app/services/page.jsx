@@ -2,6 +2,9 @@ import Hiro from "@/components/Hiro";
 import ListSection from "@/components/ListSection";
 import ListSectionDark from "@/components/ListSectionDark";
 import DistributionSection from "@/components/DistributionSection";
+import ListBenefitSection from "@/components/ListBenefitSection";
+import PackageSection from "@/components/PackageSection";
+import CTASection from "@/components/CTASection";
 
 const whyData = [
   {
@@ -88,6 +91,12 @@ export default function AboutPage() {
         className="md:grid-cols-2"
       />
       <DistributionSection />
+      <ListBenefitSection />
+      <PackageSection />
+      <CTASection
+        title="Ready to Be Part of Something Big?"
+        link={"/about#contact"}
+      />
     </div>
   );
 }

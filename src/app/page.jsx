@@ -84,7 +84,11 @@ export default function Home() {
         title="End-to-End Market Launch & Growth Support"
         data={endToEndData}
       />
-      <CTASection />
+      <CTASection
+        title="Ready to Enter Southeast Asia Without Guesswork?"
+        desc="Let's explore how your brand can succeed in Indonesia and Southeast Asia"
+        link="/services#packages"
+      />
       <NewsletterSection />
     </div>
   );

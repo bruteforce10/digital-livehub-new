@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import LogoDigitalLiveHub from "../../public/logo.svg";
+import Link from "next/link";
 
 export default function FooterSection() {
   return (
@@ -17,8 +18,12 @@ export default function FooterSection() {
           <div>
             <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-600">
-              <li>Membership</li>
-              <li>Program Kami</li>
+              <li>
+                <Link href="/services#packages">Services</Link>
+              </li>
+              <li>
+                <Link href="/services#digital-strategy">Our Programs</Link>
+              </li>
             </ul>
           </div>
           <div>
