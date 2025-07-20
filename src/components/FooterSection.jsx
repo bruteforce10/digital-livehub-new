@@ -3,8 +3,8 @@ import LogoDigitalLiveHub from "../../public/logo.svg";
 
 export default function FooterSection() {
   return (
-    <footer className="bg-white py-12 border-t">
-      <div className="container mx-auto px-4">
+    <footer className="bg-white py-12 border-t" suppressHydrationWarning>
+      <div className="container mx-auto px-4" suppressHydrationWarning>
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-6">
             <LogoDigitalLiveHub className="w-36 h-auto" />

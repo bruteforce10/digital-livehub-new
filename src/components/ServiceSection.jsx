@@ -1,4 +1,3 @@
-"use client";
 import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
@@ -30,8 +29,8 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
+    <section className="py-20" suppressHydrationWarning>
+      <div className="container mx-auto px-4" suppressHydrationWarning>
         <h2 className="text-4xl font-semibold text-center mb-16">
           The Only Partner You Need for Southeast Asia
         </h2>

@@ -1,4 +1,3 @@
-"use client";
 import { CheckCircle } from "lucide-react";
 
 const tableData = [
@@ -42,8 +41,8 @@ const tableData = [
 
 export default function TableSection() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
+    <section className="py-20" suppressHydrationWarning>
+      <div className="container mx-auto px-4" suppressHydrationWarning>
         <h2 className="text-4xl font-semibold text-center mb-16">
           Most Partners Force You to Choose. We Don't
         </h2>

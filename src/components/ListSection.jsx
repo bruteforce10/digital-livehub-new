@@ -1,10 +1,12 @@
-"use client";
 import Image from "next/image";
 
 export default function ListSection({ title, data }) {
   return (
-    <section className="py-20 bg-pink-50 border-y-2 border-primary-custom">
-      <div className="container mx-auto px-4">
+    <section
+      className="py-20 bg-pink-50 border-y-2 border-primary-custom"
+      suppressHydrationWarning
+    >
+      <div className="container mx-auto px-4" suppressHydrationWarning>
         <h2 className="text-4xl font-semibold text-center mb-16">{title}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {data.map((item, i) => (

@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 
 const benefits = [
@@ -45,8 +44,9 @@ export default function MapBenefitSection() {
     <section
       className="py-20 text-white"
       style={{ background: "var(--gradient-custom)" }}
+      suppressHydrationWarning
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4" suppressHydrationWarning>
         <h2 className="text-4xl font-semibold text-center md:mb-16">
           Why Indonesia is Your Next Big Opportunity
         </h2>

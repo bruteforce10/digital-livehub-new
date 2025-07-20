@@ -18,7 +18,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/about#contact" },
 ];
 
 export default function Navbar() {
@@ -29,8 +29,14 @@ export default function Navbar() {
   };
 
   return (
-    <header className=" backdrop-blur  sticky top-0 z-50">
-      <div className="container mx-auto px-8 py-4 flex items-center justify-between">
+    <header
+      className=" backdrop-blur  sticky top-0 z-50"
+      suppressHydrationWarning
+    >
+      <div
+        className="container mx-auto px-8 py-4 flex items-center justify-between"
+        suppressHydrationWarning
+      >
         <div className="flex items-center space-x-2">
           <LogoDigitalLiveHub className="w-36 h-auto" />
         </div>

@@ -1,5 +1,6 @@
 import EvolutionSection from "@/components/aboutComponents/EvolutionSection";
 import VisiSection from "@/components/aboutComponents/VisiSection";
+import GetInTouchSection from "@/components/GetInTouchSection";
 import Hiro from "@/components/Hiro";
 import ListSection from "@/components/ListSection";
 import SolveSection from "@/components/SolveSection";
@@ -29,12 +30,13 @@ const whyData = [
 
 export default function AboutPage() {
   return (
-    <div className="h-[3000px]">
+    <div suppressHydrationWarning>
       <Hiro title="Meet the team" desc={"Home/About Us"} button={false} />
       <EvolutionSection />
       <VisiSection />
       <SolveSection />
       <ListSection title="What Drives Us" data={whyData} />
+      <GetInTouchSection />
     </div>
   );
 }

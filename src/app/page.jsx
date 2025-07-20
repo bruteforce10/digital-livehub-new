@@ -1,5 +1,5 @@
 import CTASection from "@/components/CTASection";
-import EndToEndSection from "@/components/EndToEndSection";
+import ListSectionDark from "@/components/ListSectionDark";
 import Hiro from "@/components/Hiro";
 import MapBenefitSection from "@/components/MapBenefitSection";
 import NewsletterSection from "@/components/Newsletter";
@@ -30,9 +30,45 @@ const whyData = [
   },
 ];
 
+const endToEndData = [
+  {
+    icon: "/end-to-end/task.svg",
+    alt: "Registration",
+    title: "Regulatory & Operations",
+    items: [
+      "Brand Registration & Halal Certification",
+      "Import Permits & Tax Setup",
+      "Warehousing & Inventory Management",
+      "Order Processing & Customer Service",
+    ],
+  },
+  {
+    icon: "/end-to-end/user.svg",
+    alt: "Distribution",
+    title: "Distribution Network",
+    items: [
+      "Marketplace Operations (Shopee, Tokopedia, Lazada)",
+      "Retail Chain Partnerships",
+      "Direct-to-Consumer Channels",
+      "B2B Sales & Distribution",
+    ],
+  },
+  {
+    icon: "/end-to-end/goal.svg",
+    alt: "Digital",
+    title: "Digital Strategy & Execution",
+    items: [
+      "Brand Positioning & Messaging",
+      "Content Creation & Social Media",
+      "Paid Advertising & Influencer Marketing",
+      "Performance Analytics & Optimization",
+    ],
+  },
+];
+
 export default function Home() {
   return (
-    <div>
+    <div suppressHydrationWarning>
       <Hiro
         title="Redefining Market Entry"
         subtitle="for Southeast Asia"
@@ -44,7 +80,10 @@ export default function Home() {
       <MapBenefitSection />
       <ListSection title="Why Choose Us" data={whyData} />
       <TableSection />
-      <EndToEndSection />
+      <ListSectionDark
+        title="End-to-End Market Launch & Growth Support"
+        data={endToEndData}
+      />
       <CTASection />
       <NewsletterSection />
     </div>
