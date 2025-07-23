@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
 
-const services = [
+const SERVICE_EN = [
   {
     image: "/service/distribution.png",
     alt: "Distribution",
@@ -28,6 +28,8 @@ const services = [
   },
 ];
 
+
+
 export default function ServiceSection() {
   return (
     <section className="py-20" suppressHydrationWarning>
@@ -36,7 +38,7 @@ export default function ServiceSection() {
           The Only Partner You Need for Southeast Asia
         </h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {services.map((service, idx) => (
+          {SERVICE_EN.map((service, idx) => (
             <Card className="overflow-hidden pt-0" key={service.title}>
               <Image
                 src={service.image}

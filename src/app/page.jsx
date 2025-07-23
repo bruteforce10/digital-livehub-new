@@ -1,3 +1,4 @@
+"use client";
 import CTASection from "@/components/CTASection";
 import ListSectionDark from "@/components/ListSectionDark";
 import Hiro from "@/components/Hiro";
@@ -6,6 +7,10 @@ import NewsletterSection from "@/components/Newsletter";
 import ServiceSection from "@/components/ServiceSection";
 import TableSection from "@/components/TableSection";
 import ListSection from "@/components/ListSection";
+import EachUtils from "@/lib/EachUtils";
+import { languageAtom } from "@/lib/languageAtom";
+import { useAtom } from "jotai";
+import { getHiroData } from "@/lib/hookData";
 
 const whyData = [
   {
@@ -66,16 +71,16 @@ const endToEndData = [
   },
 ];
 
+
+
 export default function Home() {
+  const hiroData = getHiroData();
+
   return (
     <div suppressHydrationWarning>
-      <Hiro
-        title="Redefining Market Entry"
-        subtitle="for Southeast Asia"
-        desc={
-          "Digital Live Hub combines seamless distribution and performance marketing to help global brands win in Indonesia"
-        }
-      />
+      <EachUtils of={hiroData} render={(item, index) => (
+        <Hiro key={index} title={item.title} subtitle={item.subtitle} desc={item.desc} />
+      )} />
       <ServiceSection />
       <MapBenefitSection />
       <ListSection title="Why Choose Us" data={whyData} />

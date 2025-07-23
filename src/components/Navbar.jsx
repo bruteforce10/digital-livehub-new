@@ -13,6 +13,8 @@ import {
 import { Menu, Globe } from "lucide-react";
 import Link from "next/link";
 import LogoDigitalLiveHub from "../../public/logo.svg";
+import SwitchLanguage from "./SwitchLanguage";
+
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -60,8 +62,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-4">
           {/* Language Selector */}
           <div className="hidden md:flex items-center space-x-2">
-            <Globe className="w-4 h-4" />
-            <span className="text-sm">ENG</span>
+            <SwitchLanguage />
           </div>
 
           {/* Mobile Menu Sheet */}
@@ -99,7 +100,9 @@ export default function Navbar() {
                 <div className="border-t pt-4 mt-4">
                   <div className="flex items-center space-x-2 py-2 px-4">
                     <Globe className="w-4 h-4" />
-                    <span className="text-sm">English</span>
+                    <div className="w-full">
+                      <SwitchLanguage />
+                    </div>
                   </div>
                 </div>
                 <div className="mt-6">
