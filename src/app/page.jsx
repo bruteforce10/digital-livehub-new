@@ -10,89 +10,100 @@ import ListSection from "@/components/ListSection";
 import EachUtils from "@/lib/EachUtils";
 import { languageAtom } from "@/lib/languageAtom";
 import { useAtom } from "jotai";
-import { getHiroData } from "@/lib/hookData";
-
-const whyData = [
-  {
-    icon: "/why/integrated.svg",
-    title: "Integrated Solution",
-    desc: "Logistics + Marketing + Maximum efficiency",
-  },
-  {
-    icon: "/why/local.svg",
-    title: "Local Execution",
-    desc: "No cultural or regulatory barriers",
-  },
-  {
-    icon: "/why/fast.svg",
-    title: "Fast ROI",
-    desc: "Start selling from day one",
-  },
-  {
-    icon: "/why/scale.svg",
-    title: "Scale Support",
-    desc: "Ready for expansion to Malaysia, Singapore, Thailand",
-  },
-];
-
-const endToEndData = [
-  {
-    icon: "/end-to-end/task.svg",
-    alt: "Registration",
-    title: "Regulatory & Operations",
-    items: [
-      "Brand Registration & Halal Certification",
-      "Import Permits & Tax Setup",
-      "Warehousing & Inventory Management",
-      "Order Processing & Customer Service",
-    ],
-  },
-  {
-    icon: "/end-to-end/user.svg",
-    alt: "Distribution",
-    title: "Distribution Network",
-    items: [
-      "Marketplace Operations (Shopee, Tokopedia, Lazada)",
-      "Retail Chain Partnerships",
-      "Direct-to-Consumer Channels",
-      "B2B Sales & Distribution",
-    ],
-  },
-  {
-    icon: "/end-to-end/goal.svg",
-    alt: "Digital",
-    title: "Digital Strategy & Execution",
-    items: [
-      "Brand Positioning & Messaging",
-      "Content Creation & Social Media",
-      "Paid Advertising & Influencer Marketing",
-      "Performance Analytics & Optimization",
-    ],
-  },
-];
-
-
+import { HIRO_CN, HIRO_EN, HIRO_ID } from "@/constant/hiroData";
+import {
+  WHYDATA_CN,
+  WHYDATA_EN,
+  WHYDATA_ID,
+  WHYDATA_TITLE_CN,
+  WHYDATA_TITLE_EN,
+  WHYDATA_TITLE_ID,
+} from "@/constant/whyData";
+import {
+  ENDTOENDATA_CN,
+  ENDTOENDATA_EN,
+  ENDTOENDATA_ID,
+  ENDTOENDATA_TITLE_CN,
+  ENDTOENDATA_TITLE_EN,
+  ENDTOENDATA_TITLE_ID,
+} from "@/constant/endToEndData";
+import { CTADATA_CN, CTADATA_EN, CTADATA_ID } from "@/constant/ctaData";
 
 export default function Home() {
-  const hiroData = getHiroData();
+  const [language] = useAtom(languageAtom);
 
   return (
     <div suppressHydrationWarning>
-      <EachUtils of={hiroData} render={(item, index) => (
-        <Hiro key={index} title={item.title} subtitle={item.subtitle} desc={item.desc} />
-      )} />
+      <EachUtils
+        of={language === "EN" ? HIRO_EN : language === "ID" ? HIRO_ID : HIRO_CN}
+        render={(item, index) => (
+          <Hiro
+            key={index}
+            title={item.title}
+            subtitle={item.subtitle}
+            desc={item.desc}
+            language={language}
+          />
+        )}
+      />
       <ServiceSection />
       <MapBenefitSection />
-      <ListSection title="Why Choose Us" data={whyData} />
+      <ListSection
+        title={
+          language === "EN"
+            ? WHYDATA_TITLE_EN
+            : language === "ID"
+            ? WHYDATA_TITLE_ID
+            : WHYDATA_TITLE_CN
+        }
+        data={
+          language === "EN"
+            ? WHYDATA_EN
+            : language === "ID"
+            ? WHYDATA_ID
+            : WHYDATA_CN
+        }
+      />
       <TableSection />
       <ListSectionDark
-        title="End-to-End Market Launch & Growth Support"
-        data={endToEndData}
+        title={
+          language === "EN"
+            ? ENDTOENDATA_TITLE_EN
+            : language === "ID"
+            ? ENDTOENDATA_TITLE_ID
+            : ENDTOENDATA_TITLE_CN
+        }
+        data={
+          language === "EN"
+            ? ENDTOENDATA_EN
+            : language === "ID"
+            ? ENDTOENDATA_ID
+            : ENDTOENDATA_CN
+        }
       />
       <CTASection
-        title="Ready to Enter Southeast Asia Without Guesswork?"
-        desc="Let's explore how your brand can succeed in Indonesia and Southeast Asia"
-        link="/services#packages"
+        title={
+          language === "EN"
+            ? CTADATA_EN.title
+            : language === "ID"
+            ? CTADATA_ID.title
+            : CTADATA_CN.title
+        }
+        desc={
+          language === "EN"
+            ? CTADATA_EN.desc
+            : language === "ID"
+            ? CTADATA_ID.desc
+            : CTADATA_CN.desc
+        }
+        link={
+          language === "EN"
+            ? CTADATA_EN.link
+            : language === "ID"
+            ? CTADATA_ID.link
+            : CTADATA_CN.link
+        }
+        language={language}
       />
       <NewsletterSection />
     </div>

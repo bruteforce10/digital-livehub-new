@@ -2,7 +2,13 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-export default function Hiro({ title, subtitle, desc, button = true }) {
+export default function Hiro({
+  title,
+  subtitle,
+  desc,
+  button = true,
+  language,
+}) {
   return (
     <section
       className="-mt-24 pt-45 bg-gray-50 py-32 relative overflow-hidden border-b-2 border-primary-custom"
@@ -28,7 +34,13 @@ export default function Hiro({ title, subtitle, desc, button = true }) {
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{desc}</p>
         {button && (
           <Link href={"/services#packages"}>
-            <Button variant={"primary"}>GET STARTED</Button>
+            <Button variant={"primary"}>
+              {language === "EN"
+                ? "GET STARTED"
+                : language === "ID"
+                ? "MULAI SEKARANG"
+                : "开始"}
+            </Button>
           </Link>
         )}
       </div>

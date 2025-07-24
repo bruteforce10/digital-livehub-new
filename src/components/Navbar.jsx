@@ -14,17 +14,34 @@ import { Menu, Globe } from "lucide-react";
 import Link from "next/link";
 import LogoDigitalLiveHub from "../../public/logo.svg";
 import SwitchLanguage from "./SwitchLanguage";
+import { languageAtom } from "@/lib/languageAtom";
+import { useAtom } from "jotai";
+import EachUtils from "@/lib/EachUtils";
 
-
-const navItems = [
+const navItems_EN = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Contact", href: "/about#contact" },
 ];
 
+const navItems_ID = [
+  { label: "Beranda", href: "/" },
+  { label: "Tentang", href: "/about" },
+  { label: "Layanan", href: "/services" },
+  { label: "Kontak", href: "/about#contact" },
+];
+
+const navItems_CN = [
+  { label: "首页", href: "/" },
+  { label: "关于我们", href: "/about" },
+  { label: "服务", href: "/services" },
+  { label: "联系我们", href: "/about#contact" },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
+  const [language] = useAtom(languageAtom);
 
   const isActivePath = (path) => {
     return pathname === path;
@@ -44,19 +61,28 @@ export default function Navbar() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`transition-colors ${
-                isActivePath(item.href)
-                  ? "text-pink-600 font-medium"
-                  : "text-gray-700 hover:text-pink-600"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          <EachUtils
+            of={
+              language === "EN"
+                ? navItems_EN
+                : language === "ID"
+                ? navItems_ID
+                : navItems_CN
+            }
+            render={(item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`transition-colors ${
+                  isActivePath(item.href)
+                    ? "text-pink-600 font-medium"
+                    : "text-gray-700 hover:text-pink-600"
+                }`}
+              >
+                {item.label}
+              </Link>
+            )}
+          />
         </nav>
 
         <div className="flex items-center space-x-4">
@@ -79,24 +105,30 @@ export default function Navbar() {
                   <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-purple-600 rounded"></div>
                   <span>Digital LiveHub</span>
                 </SheetTitle>
-                <SheetDescription>
-                  Navigate through our services and solutions
-                </SheetDescription>
               </SheetHeader>
               <nav className="flex flex-col space-y-4 mt-8">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className={`text-lg font-medium py-2 px-4 rounded-lg hover:bg-pink-50 ${
-                      isActivePath(item.href)
-                        ? "text-pink-600 bg-pink-50"
-                        : "text-gray-700 hover:text-pink-600"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                <EachUtils
+                  of={
+                    language === "EN"
+                      ? navItems_EN
+                      : language === "ID"
+                      ? navItems_ID
+                      : navItems_CN
+                  }
+                  render={(item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className={`text-lg font-medium py-2 px-4 rounded-lg hover:bg-pink-50 ${
+                        isActivePath(item.href)
+                          ? "text-pink-600 bg-pink-50"
+                          : "text-gray-700 hover:text-pink-600"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                />
                 <div className="border-t pt-4 mt-4">
                   <div className="flex items-center space-x-2 py-2 px-4">
                     <Globe className="w-4 h-4" />
@@ -105,9 +137,13 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 px-4">
                   <Button className="w-full bg-pink-600 hover:bg-pink-700 text-white">
-                    GET STARTED
+                    {language === "EN"
+                      ? "Contact Us"
+                      : language === "ID"
+                      ? "Hubungi Kami"
+                      : "联系我们"}
                   </Button>
                 </div>
               </nav>

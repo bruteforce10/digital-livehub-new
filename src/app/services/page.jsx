@@ -1,3 +1,4 @@
+"use client";
 import Hiro from "@/components/Hiro";
 import ListSection from "@/components/ListSection";
 import ListSectionDark from "@/components/ListSectionDark";
@@ -5,96 +6,81 @@ import DistributionSection from "@/components/DistributionSection";
 import ListBenefitSection from "@/components/ListBenefitSection";
 import PackageSection from "@/components/PackageSection";
 import CTASection from "@/components/CTASection";
-
-const whyData = [
-  {
-    icon: "/why/integrated.svg",
-    title: "Integrated Solution",
-    desc: "Logistics + Marketing + Maximum efficiency",
-  },
-  {
-    icon: "/why/local.svg",
-    title: "Local Execution",
-    desc: "No cultural or regulatory barriers",
-  },
-  {
-    icon: "/why/fast.svg",
-    title: "Fast ROI",
-    desc: "Start selling from day one",
-  },
-  {
-    icon: "/why/scale.svg",
-    title: "Scale Support",
-    desc: "Ready for expansion to Malaysia, Singapore, Thailand",
-  },
-];
-
-const regulatoryData = [
-  {
-    icon: "/operation/consumble.svg",
-    title: "Brand Registration & Halal Certification",
-    items: [
-      "Brand registration and trademark protection",
-      "Halal certification process",
-      "BPOM registration",
-      "Product compliance verification",
-      "Regulatory documentation",
-    ],
-  },
-  {
-    icon: "/operation/to-do-list.svg",
-    title: "Warehousing & Inventory Management",
-    items: [
-      "Strategic warehouse locations",
-      "Real-time inventory tracking",
-      "Quality control processes",
-      "Temperature-controlled storage",
-      "Automated reorder systems",
-    ],
-  },
-  {
-    icon: "/operation/supply-chain.svg",
-    title: "Import & Compliance Process",
-    items: [
-      "Import permit acquisition",
-      "Customs clearance",
-      "Tax optimization strategies",
-      "Documentation management",
-      "Regulatory compliance monitoring",
-    ],
-  },
-  {
-    icon: "/operation/consumble.svg",
-    title: "Order Fulfillment",
-    items: [
-      "Same-day processing",
-      "Multi-channel integration",
-      "Last-mile delivery optimization",
-      "Returns management",
-      "Customer service support",
-    ],
-  },
-];
+import { useAtom } from "jotai";
+import { languageAtom } from "@/lib/languageAtom";
+import { WHYDATA_CN, WHYDATA_EN, WHYDATA_ID } from "@/constant/whyData";
+import {
+  REGULATORY_CN,
+  REGULATORY_EN,
+  REGULATORY_ID,
+} from "@/constant/regulatorData";
 
 export default function AboutPage() {
+  const [language] = useAtom(languageAtom);
+
   return (
     <div suppressHydrationWarning>
       <Hiro
-        title="Discover the Power of Our Services"
-        desc={"Home/Services"}
+        title={
+          language === "EN"
+            ? "Discover the Power of Our Services"
+            : language === "ID"
+            ? "Temukan Kekuatan Layanan Kami"
+            : "探索我们的服务力量"
+        }
+        desc={
+          language === "EN"
+            ? "Home/Services"
+            : language === "ID"
+            ? "Beranda/Layanan"
+            : "首页/服务"
+        }
         button={false}
       />
-      <ListSection title="Why Choose Us" data={whyData} />
+      <ListSection
+        title={
+          language === "EN"
+            ? "Why Choose Us"
+            : language === "ID"
+            ? "Kenapa Memilih Kami"
+            : "为什么选择我们"
+        }
+        data={
+          language === "EN"
+            ? WHYDATA_EN
+            : language === "ID"
+            ? WHYDATA_ID
+            : WHYDATA_CN
+        }
+      />
       <ListSectionDark
-        title="Regulatory & Operations"
-        data={regulatoryData}
+        title={
+          language === "EN"
+            ? "Regulatory & Operations"
+            : language === "ID"
+            ? "Regulasi & Operasional"
+            : "法规与运营"
+        }
+        data={
+          language === "EN"
+            ? REGULATORY_EN
+            : language === "ID"
+            ? REGULATORY_ID
+            : REGULATORY_CN
+        }
         className="md:grid-cols-2"
       />
       <DistributionSection />
       <ListBenefitSection />
       <PackageSection />
       <CTASection
-        title="Ready to Be Part of Something Big?"
+        title={
+          language === "EN"
+            ? "Ready to Be Part of Something Big?"
+            : language === "ID"
+            ? "Siap Menjadi Bagian dari Sesuatu yang Besar?"
+            : "准备成为伟大事业的一部分吗？"
+        }
         link={"/about#contact"}
       />
     </div>

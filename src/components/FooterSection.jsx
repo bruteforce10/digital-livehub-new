@@ -1,8 +1,13 @@
+"use client";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import LogoDigitalLiveHub from "../../public/logo.svg";
 import Link from "next/link";
+import { useAtom } from "jotai";
+import { languageAtom } from "@/lib/languageAtom";
 
 export default function FooterSection() {
+  const [language] = useAtom(languageAtom);
+
   return (
     <footer className="bg-white py-12 border-t" suppressHydrationWarning>
       <div className="container mx-auto px-4" suppressHydrationWarning>
@@ -16,25 +21,55 @@ export default function FooterSection() {
             </div>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Services</h4>
+            <h4 className="font-bold mb-4">
+              {language === "EN"
+                ? "Services"
+                : language === "ID"
+                ? "Layanan"
+                : "服务"}
+            </h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <Link href="/services#packages">Services</Link>
+                <Link href="/services#packages">
+                  {language === "EN"
+                    ? "Packages"
+                    : language === "ID"
+                    ? "Paket"
+                    : "套餐"}
+                </Link>
               </li>
               <li>
-                <Link href="/services#digital-strategy">Our Programs</Link>
+                <Link href="/services#digital-strategy">
+                  {language === "EN"
+                    ? "Our Programs"
+                    : language === "ID"
+                    ? "Program Kami"
+                    : "我们的计划"}
+                </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">We Can't Wait to Hear From You!</h4>
+            <h4 className="font-bold mb-4">
+              {language === "EN"
+                ? "We Can't Wait to Hear From You!"
+                : language === "ID"
+                ? "Kami Tidak Sabar Mendengar Dari Anda!"
+                : "我们期待听到您的消息！"}
+            </h4>
             <p className="text-gray-600 text-sm">
               Mega Bekasi Hypermall Lt.1, Jl. Ahmad Yani No.1, RT.004/RW.001,
               Marga Jaya, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17141
             </p>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Contact Us</h4>
+            <h4 className="font-bold mb-4">
+              {language === "EN"
+                ? "Contact Us"
+                : language === "ID"
+                ? "Hubungi Kami"
+                : "联系我们"}
+            </h4>
             <p className="text-gray-600 text-sm">
               Email: info@digitallivehubumkm.co.id
               <br />

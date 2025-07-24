@@ -17,6 +17,8 @@ import {
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
+import { useAtom } from "jotai";
+import { languageAtom } from "@/lib/languageAtom";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name is required" }),
@@ -26,6 +28,7 @@ const formSchema = z.object({
 });
 
 export default function GetInTouchSection() {
+  const [language] = useAtom(languageAtom);
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -45,37 +48,67 @@ export default function GetInTouchSection() {
       });
       if (res.ok) {
         toast.success(
-          "Pesan berhasil dikirim! Kami akan segera menghubungi Anda."
+          language === "EN"
+            ? "Message sent successfully! We will get back to you soon."
+            : language === "ID"
+            ? "Pesan berhasil dikirim! Kami akan segera menghubungi Anda."
+            : "消息已成功发送！我们会尽快与您联系！"
         );
         form.reset();
       } else {
         const data = await res.json();
-        toast.error(data.error || "Terjadi kesalahan saat mengirim pesan.");
+        toast.error(
+          data.error || "Failed to send message." + " Please try again later."
+        );
       }
     } catch (err) {
-      toast.error("Gagal mengirim pesan. Silakan coba lagi nanti.");
+      toast.error(
+        "" + err.message || "An error occurred. Please try again later."
+      );
     }
   }
 
   return (
     <section className="py-20" id="contact">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4">Get in Touch</h2>
+        <h2 className="text-4xl font-bold text-center mb-4">
+          {language === "EN"
+            ? "Get In Touch"
+            : language === "ID"
+            ? "Hubungi Kami"
+            : "联系我们"}
+        </h2>
         <p className="text-center text-gray-600 mb-16">
-          Ready to Be Part of Something Big?
+          {language === "EN"
+            ? "Ready to Be Part of Something Big?"
+            : language === "ID"
+            ? "Siap Menjadi Bagian dari Sesuatu yang Besar?"
+            : "准备成为伟大事业的一部分吗？"}
         </p>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="flex items-center space-x-3">
             <Phone className="w-5 h-5 text-pink-600" />
             <div>
-              <div className="font-medium">PHONE</div>
+              <div className="font-medium">
+                {language === "EN"
+                  ? "PHONE"
+                  : language === "ID"
+                  ? "TELEFON"
+                  : "电话"}
+              </div>
               <div className="text-sm text-gray-600">+62 857 1138 1050</div>
             </div>
           </div>
           <div className="flex items-center space-x-3">
             <MapPin className="w-5 h-5 text-pink-600" />
             <div>
-              <div className="font-medium">LOCATION</div>
+              <div className="font-medium">
+                {language === "EN"
+                  ? "ADDRESS"
+                  : language === "ID"
+                  ? "ALAMAT"
+                  : "地址"}
+              </div>
               <div className="text-sm text-gray-600">
                 Jl. Raya Bogor KM 26, Pekayon, Pasar Rebo, Jakarta Timur, DKI
                 Jakarta 13710
@@ -117,9 +150,24 @@ export default function GetInTouchSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name *</FormLabel>
+                      <FormLabel>
+                        {language === "EN"
+                          ? "Name *"
+                          : language === "ID"
+                          ? "Nama *"
+                          : "姓名 *"}
+                      </FormLabel>
                       <FormControl>
-                        <Input placeholder="Name *" {...field} />
+                        <Input
+                          placeholder={
+                            language === "EN"
+                              ? "Name *"
+                              : language === "ID"
+                              ? "Nama *"
+                              : "姓名 *"
+                          }
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -130,9 +178,25 @@ export default function GetInTouchSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email *</FormLabel>
+                      <FormLabel>
+                        {language === "EN"
+                          ? "Email *"
+                          : language === "ID"
+                          ? "Email *"
+                          : "邮箱 *"}
+                      </FormLabel>
                       <FormControl>
-                        <Input placeholder="Email *" type="email" {...field} />
+                        <Input
+                          placeholder={
+                            language === "EN"
+                              ? "Email *"
+                              : language === "ID"
+                              ? "Email *"
+                              : "邮箱 *"
+                          }
+                          type="email"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -143,9 +207,24 @@ export default function GetInTouchSection() {
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Subject</FormLabel>
+                      <FormLabel>
+                        {language === "EN"
+                          ? "Subject"
+                          : language === "ID"
+                          ? "Subjek"
+                          : "主题"}
+                      </FormLabel>
                       <FormControl>
-                        <Input placeholder="Subject" {...field} />
+                        <Input
+                          placeholder={
+                            language === "EN"
+                              ? "Subject"
+                              : language === "ID"
+                              ? "Subjek"
+                              : "主题"
+                          }
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -156,10 +235,22 @@ export default function GetInTouchSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message *</FormLabel>
+                      <FormLabel>
+                        {language === "EN"
+                          ? "Message"
+                          : language === "ID"
+                          ? "Pesan"
+                          : "信息"}
+                      </FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="How can we help you? *"
+                          placeholder={
+                            language === "EN"
+                              ? "Your message..."
+                              : language === "ID"
+                              ? "Pesan Anda..."
+                              : "您的信息..."
+                          }
                           className="w-full h-32"
                           {...field}
                         />
@@ -172,7 +263,11 @@ export default function GetInTouchSection() {
                   className="w-full bg-pink-600 hover:bg-pink-700 text-white py-3"
                   type="submit"
                 >
-                  SEND
+                  {language === "EN"
+                    ? "Send Message"
+                    : language === "ID"
+                    ? "Kirim Pesan"
+                    : "发送消息"}
                 </Button>
               </form>
             </Form>

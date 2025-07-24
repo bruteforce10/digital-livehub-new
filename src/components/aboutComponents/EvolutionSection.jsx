@@ -1,26 +1,15 @@
+import {
+  EVOLUTION_CN,
+  EVOLUTION_EN,
+  EVOLUTION_ID,
+  EVOLUTION_TITLE_CN,
+  EVOLUTION_TITLE_EN,
+  EVOLUTION_TITLE_ID,
+} from "@/constant/evolutionData";
+import EachUtils from "@/lib/EachUtils";
+import { languageAtom } from "@/lib/languageAtom";
+import { useAtom } from "jotai";
 import React from "react";
-
-const timelineData = [
-  {
-    year: "2023",
-    title: "b2b business",
-    description: "Started as a B2B focused company serving business clients",
-    gradient: "from-purple-700 to-pink-500",
-  },
-  {
-    year: "2024",
-    title: "digital marketing",
-    description: "Expanded into comprehensive digital marketing solutions",
-    gradient: "from-pink-500 to-purple-600",
-  },
-  {
-    year: "2025",
-    title: "AI driven & international market",
-    description: "AI-powered solutions for global market expansion",
-    gradient: "from-pink-600 to-red-500",
-    isHighlighted: true,
-  },
-];
 
 const TimelineItem = ({
   year,
@@ -41,18 +30,33 @@ const TimelineItem = ({
 );
 
 const EvolutionSection = () => {
+  const [language] = useAtom(languageAtom);
+
   return (
     <section className="py-20 overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16">
-          Company Evolution Timeline
+          {language === "EN"
+            ? EVOLUTION_TITLE_EN
+            : language === "ID"
+            ? EVOLUTION_TITLE_ID
+            : EVOLUTION_TITLE_CN}
         </h2>
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12 relative">
             <div className="w-[calc(100%-12rem)] max-md:hidden mx-auto inset-x-0 h-[1px] bg-gray-200 absolute -z-10 top-9"></div>
-            {timelineData.map((item, index) => (
-              <TimelineItem key={item.year} {...item} />
-            ))}
+            <EachUtils
+              of={
+                language === "EN"
+                  ? EVOLUTION_EN
+                  : language === "ID"
+                  ? EVOLUTION_ID
+                  : EVOLUTION_CN
+              }
+              render={(item, index) => (
+                <TimelineItem key={item.year} {...item} />
+              )}
+            />
           </div>
         </div>
       </div>
