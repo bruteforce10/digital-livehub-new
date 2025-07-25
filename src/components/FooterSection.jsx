@@ -58,8 +58,16 @@ export default function FooterSection() {
                 : "我们期待听到您的消息！"}
             </h4>
             <p className="text-gray-600 text-sm">
-              Mega Bekasi Hypermall Lt.1, Jl. Ahmad Yani No.1, RT.004/RW.001,
-              Marga Jaya, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17141
+              <ul className="space-y-2 list-disc">
+                <li>
+                  Gd. Agro Plaza Kuningan, Jakarta Selatan, Indonesia - HQ
+                </li>
+                <li>
+                  Mega Bekasi Hypermall Lt. 1, Bekasi, Indonesia - Live Studio
+                </li>
+                <li>Lvl 4-1, Sunway Putra Mall, KL, Malaysia - MY Branch</li>
+                <li>190 Clemenceau Avenue #06-01, Singapore - SG Branch</li>
+              </ul>
             </p>
           </div>
           <div>
