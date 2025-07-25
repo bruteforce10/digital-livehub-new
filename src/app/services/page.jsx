@@ -81,6 +81,7 @@ export default function AboutPage() {
             ? "Siap Menjadi Bagian dari Sesuatu yang Besar?"
             : "准备成为伟大事业的一部分吗？"
         }
+        language={language}
         link={"/about#contact"}
       />
     </div>
