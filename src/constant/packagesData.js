@@ -1,7 +1,6 @@
 export const PACKAGES_EN = [
   {
     name: "Market Entry Package",
-    price: "$XXX",
     features: [
       "Brand registration",
       "Basic marketplace setup",
@@ -12,7 +11,6 @@ export const PACKAGES_EN = [
   },
   {
     name: "Regional Expansion",
-    price: "$XXX",
     features: [
       "Multi-marketplace presence",
       "Advanced inventory systems",
@@ -23,7 +21,6 @@ export const PACKAGES_EN = [
   },
   {
     name: "Growth Acceleration",
-    price: "$XXX",
     features: [
       "Full-service solution",
       "AI-driven optimization",
@@ -37,7 +34,6 @@ export const PACKAGES_EN = [
 export const PACKAGES_ID = [
   {
     name: "Paket Masuk Pasar",
-    price: "$XXX",
     features: [
       "Registrasi merek",
       "Penyiapan marketplace dasar",
@@ -48,7 +44,6 @@ export const PACKAGES_ID = [
   },
   {
     name: "Ekspansi Regional",
-    price: "$XXX",
     features: [
       "Kehadiran di banyak marketplace",
       "Sistem inventaris lanjutan",
@@ -59,7 +54,6 @@ export const PACKAGES_ID = [
   },
   {
     name: "Percepatan Pertumbuhan",
-    price: "$XXX",
     features: [
       "Solusi layanan lengkap",
       "Optimisasi berbasis AI",
@@ -73,13 +67,11 @@ export const PACKAGES_ID = [
 export const PACKAGES_CN = [
   {
     name: "市场入门套餐",
-    price: "$XXX",
     features: ["品牌注册", "基础电商平台设置", "初始库存管理", "基础营销支持"],
     popular: false,
   },
   {
     name: "区域扩展套餐",
-    price: "$XXX",
     features: [
       "多平台销售覆盖",
       "高级库存系统",
@@ -90,7 +82,6 @@ export const PACKAGES_CN = [
   },
   {
     name: "增长加速套餐",
-    price: "$XXX",
     features: [
       "全方位服务解决方案",
       "AI驱动的优化",

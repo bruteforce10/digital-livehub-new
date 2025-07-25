@@ -11,13 +11,17 @@ export default function SolveSection() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16">
+        <h2 className="text-4xl font-bold text-center mb-6">
           {language === "EN"
-            ? "How We Solve It"
+            ? "The Problem We Solve"
             : language === "ID"
-            ? "Bagaimana Kami Menyelesaikannya"
-            : "我们如何解决问题"}
+            ? "Masalah yang Kami Selesaikan"
+            : "我们解决的问题"}
         </h2>
+        <p className="text-lg text-center mb-12 mx-auto">
+          Breaking into a new market is never easy, especially in Southeast
+          Asia. Brands often face:
+        </p>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <EachUtils
@@ -68,6 +72,12 @@ export default function SolveSection() {
               )}
             />
           </div>
+          <p className="text-md text-muted-foreground text-center mt-10 mx-auto">
+            We exist to eliminate these barriers and transform complexity into
+            clarity . Our role is to help brands grow faster, stronger, and
+            without borders. Most importantly, we grow together. Every challenge
+            is ours to solve, because we win by helping you grow
+          </p>
         </div>
       </div>
     </section>

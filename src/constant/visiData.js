@@ -2,7 +2,7 @@ export const VISION_EN = [
   {
     title: "Vision",
     description:
-      "Today, we empower global brands to conquer Indonesia and Malaysia, Tomorrow, we'll unlock China, Thailand, Japan, Korea, Vietnam, and the Philippines, creating a pan-Asian commerce network.",
+      "Our goal is to be the bridge and marketing power house for brands across Southeast Asia, enabling them to scale and sell seamlessly through our resources, network, and deep market understanding. From Indonesia to Malaysia, Singapore, Vietnam, Thailand, Korea, China, and beyond, we connect the region so brands can expand without borders.",
     bulletPoints: [],
   },
   {
@@ -20,7 +20,7 @@ export const VISION_ID = [
   {
     title: "Visi",
     description:
-      "Hari ini, kami memberdayakan merek global untuk menaklukkan Indonesia dan Malaysia. Besok, kami akan membuka pasar di Tiongkok, Thailand, Jepang, Korea, Vietnam, dan Filipina, menciptakan jaringan perdagangan pan-Asia.",
+      "Kami ingin menjadi jembatan dan kekuatan pemasaran bagi merek di seluruh Asia Tenggara, memungkinkan mereka untuk berkembang dan menjual dengan lancar melalui sumber daya, jaringan, dan pemahaman pasar yang mendalam. Dari Indonesia ke Malaysia, Singapura, Vietnam, Thailand, Korea, China, dan seterusnya, kami menghubungkan kawasan ini sehingga merek dapat berkembang tanpa batas.",
     bulletPoints: [],
   },
   {
@@ -38,7 +38,7 @@ export const VISION_CN = [
   {
     title: "愿景",
     description:
-      "今天，我们帮助全球品牌开拓印尼和马来西亚市场。明天，我们将进入中国、泰国、日本、韩国、越南和菲律宾，打造泛亚洲商业网络。",
+      "我们的目标是成为东南亚品牌的桥梁和营销强国，使他们能够通过我们的资源、网络和深刻的市场理解无缝扩展和销售。从印度尼西亚到马来西亚、新加坡、越南、泰国、韩国、中国及其他地区，我们连接整个区域，使品牌能够无国界地扩展。",
     bulletPoints: [],
   },
   {

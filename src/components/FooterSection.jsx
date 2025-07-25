@@ -79,9 +79,6 @@ export default function FooterSection() {
             </p>
           </div>
         </div>
-        <div className="border-t mt-8 pt-8 text-center text-gray-600 text-sm">
-          © 2025 Digital LiveHub DMHUB
-        </div>
       </div>
     </footer>
   );

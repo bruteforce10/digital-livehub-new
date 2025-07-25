@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Button } from "./ui/button";
-import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
+import { Mail, MapPin, Linkedin, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -87,14 +87,14 @@ export default function GetInTouchSection() {
         </p>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="flex items-center space-x-3">
-            <Phone className="w-5 h-5 text-pink-600" />
+            <MessageCircle className="w-5 h-5 text-pink-600" />
             <div>
               <div className="font-medium">
                 {language === "EN"
-                  ? "PHONE"
+                  ? "Fast Whatapps"
                   : language === "ID"
-                  ? "TELEFON"
-                  : "电话"}
+                  ? "WhatsApp Cepat"
+                  : "快速WhatsApp"}
               </div>
               <div className="text-sm text-gray-600">+62 857 1138 1050</div>
             </div>

@@ -52,8 +52,7 @@ const PackageSection = () => {
                       </span>
                     </div>
                   )}
-                  <h3 className="text-2xl font-bold mb-4">{pkg.name}</h3>
-                  <div className="text-3xl font-bold mb-6">{pkg.price}</div>
+                  <h3 className="text-2xl font-bold mb-6">{pkg.name}</h3>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((feature, i) => (
                       <li className="flex items-center space-x-2" key={i}>

@@ -16,10 +16,22 @@ export const SOLVE_EN = [
     titleClass: "text-transparent bg-clip-text",
     cardClass: "p-6 bg-pink-50 border-pink-200",
     items: [
-      { text: "Integrated distribution + marketing", icon: true },
-      { text: "Single partner, seamless execution", icon: true },
-      { text: "Fast market entry, immediate ROI", icon: true },
-      { text: "Local expertise, no surprises", icon: true },
+      {
+        text: "Lack of market understanding ; strategies become misaligned without deep local insights",
+        icon: true,
+      },
+      {
+        text: "Cultural and behavioral gaps ; unfamiliar consumer behavior leads to ineffective messaging",
+        icon: true,
+      },
+      {
+        text: "Slow and fragmented execution ; disconnected efforts delay growth and expansion",
+        icon: true,
+      },
+      {
+        text: "Difficulty finding a trusted, experienced partner ;  many struggle to find reliable teams with regional expertise",
+        icon: true,
+      },
     ],
     isAfter: true,
   },
