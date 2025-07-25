@@ -109,9 +109,17 @@ export default function GetInTouchSection() {
                   ? "ALAMAT"
                   : "地址"}
               </div>
-              <div className="text-sm text-gray-600">
-                Jl. Raya Bogor KM 26, Pekayon, Pasar Rebo, Jakarta Timur, DKI
-                Jakarta 13710
+              <div className="text-sm text-gray-600 pl-4 pt-2">
+                <ul className="space-y-2 list-disc">
+                  <li>
+                    Gd. Agro Plaza Kuningan, Jakarta Selatan, Indonesia - HQ
+                  </li>
+                  <li>
+                    Mega Bekasi Hypermall Lt. 1, Bekasi, Indonesia - Live Studio
+                  </li>
+                  <li>Lvl 4-1, Sunway Putra Mall, KL, Malaysia - MY Branch</li>
+                  <li>190 Clemenceau Avenue #06-01, Singapore - SG Branch</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -133,7 +141,7 @@ export default function GetInTouchSection() {
             <div>
               <div className="font-medium">EMAIL</div>
               <div className="text-sm text-gray-600">
-                hello@digitallivehub.com
+                marketing@digitallivehub.id
               </div>
             </div>
           </div>

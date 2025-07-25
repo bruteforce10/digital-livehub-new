@@ -28,6 +28,7 @@ import {
   ENDTOENDATA_TITLE_ID,
 } from "@/constant/endToEndData";
 import { CTADATA_CN, CTADATA_EN, CTADATA_ID } from "@/constant/ctaData";
+import AISection from "@/components/AISection";
 
 export default function Home() {
   const [language] = useAtom(languageAtom);
@@ -64,6 +65,7 @@ export default function Home() {
             : WHYDATA_CN
         }
       />
+      <AISection />
       <TableSection />
       <ListSectionDark
         title={

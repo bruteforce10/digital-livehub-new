@@ -21,7 +21,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: email,
-      to: "hello@digitallivehub.com",
+      to: "marketing@digitallivehub.id",
       subject: subject || `Contact Form Submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
     };
