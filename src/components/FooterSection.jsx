@@ -79,9 +79,9 @@ export default function FooterSection() {
                 : "联系我们"}
             </h4>
             <p className="text-gray-600 text-sm">
-              Email: info@digitallivehubumkm.co.id
+              Email: marketing@digitallivehub.id
               <br />
-              Phone: +62 898-0961-999
+              Phone: +62 857 1138 1050
               <br />
               Jakarta, Indonesia
             </p>
