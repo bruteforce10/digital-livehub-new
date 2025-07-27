@@ -7,7 +7,12 @@ import { Button } from "./ui/button";
 import { languageAtom } from "@/lib/languageAtom";
 import { useAtom } from "jotai";
 import EachUtils from "@/lib/EachUtils";
-import { PACKAGES_CN, PACKAGES_EN, PACKAGES_ID } from "@/constant/packagesData";
+import {
+  PACKAGES_CN,
+  PACKAGES_EN,
+  PACKAGES_ID,
+  PACKAGES_KR,
+} from "@/constant/packagesData";
 
 const PackageSection = () => {
   const [language] = useAtom(languageAtom);
@@ -23,7 +28,9 @@ const PackageSection = () => {
             ? "Choose Your Growth Path"
             : language === "ID"
             ? "Pilihan Paket Pertumbuhan"
-            : "选择您的成长路径"}
+            : language === "KR"
+            ? "성장 경로 선택"
+            : "选择成长路径"}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -33,6 +40,8 @@ const PackageSection = () => {
                 ? PACKAGES_EN
                 : language === "ID"
                 ? PACKAGES_ID
+                : language === "KR"
+                ? PACKAGES_KR
                 : PACKAGES_CN
             }
             render={(pkg, index) => (
@@ -47,8 +56,14 @@ const PackageSection = () => {
                 <CardContent className="p-8">
                   {pkg.popular && (
                     <div className="text-center mb-4">
-                      <span className="bg-white text-pink-600 px-3 py-1 rounded-full text-sm font-bold">
-                        POPULAR
+                      <span className="bg-white text-pink-600 px-3 py-1 rounded-full uppercase text-sm font-bold">
+                        {language === "EN"
+                          ? "Popular"
+                          : language === "ID"
+                          ? "Populer"
+                          : language === "KR"
+                          ? "인기"
+                          : "热门"}
                       </span>
                     </div>
                   )}
@@ -66,6 +81,8 @@ const PackageSection = () => {
                       ? "GET STARTED"
                       : language === "ID"
                       ? "MULAI SEKARANG"
+                      : language === "KR"
+                      ? "시작하기"
                       : "开始"}
                   </Button>
                 </CardContent>

@@ -1,7 +1,12 @@
+import { AIDATA_CN, AIDATA_EN, AIDATA_ID, AIDATA_KR } from "@/constant/AIData";
+import { languageAtom } from "@/lib/languageAtom";
+import { useAtom } from "jotai";
 import Image from "next/image";
 import React from "react";
 
 const AISection = () => {
+  const [language] = useAtom(languageAtom);
+
   return (
     <div className="container mx-auto px-4 grid grid-cols-1 py-20 lg:grid-cols-2 lg:gap-8 items-center">
       <div className=" max-lg:text-center lg:order-1 order-2">
@@ -12,18 +17,22 @@ const AISection = () => {
               "linear-gradient(45deg, #E96E4D 0%, #D4346A 52%, #644B86 100%)",
           }}
         >
-          Empowering Human Potential with AI
+          {language === "EN"
+            ? AIDATA_EN.title
+            : language === "ID"
+            ? AIDATA_ID.title
+            : language === "CN"
+            ? AIDATA_CN.title
+            : AIDATA_KR.title}
         </h2>
         <p>
-          We proudly position ourselves as an AI powerhouse, not to replace
-          human roles, but to empower them. At our core, we believe technology
-          should amplify human potential, not eliminate it. That’s why AI is
-          integrated across all our teams—not as a substitute, but as a powerful
-          assistant. It helps us work faster, think smarter, and extend our
-          reach—from streamlining operations to delivering sharper insights and
-          unlocking new opportunities. This synergy between human creativity and
-          AI efficiency keeps us agile, relevant, and ahead in an ever-evolving
-          market.
+          {language === "EN"
+            ? AIDATA_EN.description
+            : language === "ID"
+            ? AIDATA_ID.description
+            : language === "CN"
+            ? AIDATA_CN.description
+            : AIDATA_KR.description}
         </p>
       </div>
       <Image

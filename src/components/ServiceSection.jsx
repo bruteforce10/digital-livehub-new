@@ -7,9 +7,11 @@ import { languageAtom } from "@/lib/languageAtom";
 import {
   SERVICE_CN,
   SERVICE_ID,
+  SERVICE_KR,
   SERVICE_TITLE_CN,
   SERVICE_TITLE_EN,
   SERVICE_TITLE_ID,
+  SERVICE_TITLE_KR,
 } from "@/constant/serviceData";
 import EachUtils from "@/lib/EachUtils";
 
@@ -49,7 +51,9 @@ export default function ServiceSection() {
             ? SERVICE_TITLE_EN
             : language === "ID"
             ? SERVICE_TITLE_ID
-            : SERVICE_TITLE_CN}
+            : language === "CN"
+            ? SERVICE_TITLE_CN
+            : SERVICE_TITLE_KR}
         </h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <EachUtils
@@ -58,7 +62,9 @@ export default function ServiceSection() {
                 ? SERVICE_EN
                 : language === "ID"
                 ? SERVICE_ID
-                : SERVICE_CN
+                : language === "CN"
+                ? SERVICE_CN
+                : SERVICE_KR
             }
             render={(service) => (
               <Card className="overflow-hidden pt-0" key={service.title}>

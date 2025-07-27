@@ -105,6 +105,40 @@ const DISTRIBUTION_DATA = {
       },
     ],
   },
+  KR: {
+    title: "유통 네트워크",
+    subtitle: "인도네시아 전역의 포괄적 도달 범위",
+    sections: [
+      {
+        image: "/marketplace.png",
+        alt: "마켓플레이스 운영",
+        title: "서비스 포함:",
+        items: [
+          "스토어 설정 및 최적화",
+          "제품 목록 관리",
+          "재고 동기화",
+          "가격 전략 및 프로모션",
+          "고객 서비스 관리",
+          "성능 분석",
+          "광고",
+        ],
+      },
+      {
+        image: "/network.png",
+        alt: "리셀러 네트워크",
+        title: "서비스 포함:",
+        items: [
+          "500+ 검증된 리셀러 파트너",
+          "34개 주 전역의 커버리지",
+          "교육 및 지원 프로그램",
+          "성과 인센티브 시스템",
+          "실시간 판매 추적",
+          "마케팅 자료 지원",
+          "대량 주문 관리",
+        ],
+      },
+    ],
+  },
 };
 
 export default function DistributionSection() {

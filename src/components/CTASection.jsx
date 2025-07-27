@@ -21,6 +21,8 @@ export default function CTASection({ title, desc, link, language }) {
               ? "GET STARTED"
               : language === "ID"
               ? "MULAI SEKARANG"
+              : language === "KR"
+              ? "시작하기"
               : "开始"}
           </Button>
         </Link>

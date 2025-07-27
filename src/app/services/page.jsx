@@ -8,11 +8,17 @@ import PackageSection from "@/components/PackageSection";
 import CTASection from "@/components/CTASection";
 import { useAtom } from "jotai";
 import { languageAtom } from "@/lib/languageAtom";
-import { WHYDATA_CN, WHYDATA_EN, WHYDATA_ID } from "@/constant/whyData";
+import {
+  WHYDATA_CN,
+  WHYDATA_EN,
+  WHYDATA_ID,
+  WHYDATA_KR,
+} from "@/constant/whyData";
 import {
   REGULATORY_CN,
   REGULATORY_EN,
   REGULATORY_ID,
+  REGULATORY_KR,
 } from "@/constant/regulatorData";
 
 export default function AboutPage() {
@@ -26,14 +32,18 @@ export default function AboutPage() {
             ? "Discover the Power of Our Services"
             : language === "ID"
             ? "Temukan Kekuatan Layanan Kami"
-            : "探索我们的服务力量"
+            : language === "KR"
+            ? "사용가능성을 찾아보자"
+            : "发现我们的服务力量"
         }
         desc={
           language === "EN"
             ? "Home/Services"
             : language === "ID"
             ? "Beranda/Layanan"
-            : "首页/服务"
+            : language === "KR"
+            ? "홈/서비스"
+            : "主页/服务"
         }
         button={false}
       />
@@ -43,6 +53,8 @@ export default function AboutPage() {
             ? "Why Choose Us"
             : language === "ID"
             ? "Kenapa Memilih Kami"
+            : language === "KR"
+            ? "왜 우리를 선택해야 하는가"
             : "为什么选择我们"
         }
         data={
@@ -50,6 +62,8 @@ export default function AboutPage() {
             ? WHYDATA_EN
             : language === "ID"
             ? WHYDATA_ID
+            : language === "KR"
+            ? WHYDATA_KR
             : WHYDATA_CN
         }
       />
@@ -59,13 +73,17 @@ export default function AboutPage() {
             ? "Regulatory & Operations"
             : language === "ID"
             ? "Regulasi & Operasional"
-            : "法规与运营"
+            : language === "KR"
+            ? "규제 및 운영"
+            : "法规和运营"
         }
         data={
           language === "EN"
             ? REGULATORY_EN
             : language === "ID"
             ? REGULATORY_ID
+            : language === "KR"
+            ? REGULATORY_KR
             : REGULATORY_CN
         }
         className="md:grid-cols-2"
@@ -79,7 +97,9 @@ export default function AboutPage() {
             ? "Ready to Be Part of Something Big?"
             : language === "ID"
             ? "Siap Menjadi Bagian dari Sesuatu yang Besar?"
-            : "准备成为伟大事业的一部分吗？"
+            : language === "KR"
+            ? "큰 일의 일부가 될 준비가 되셨습니까?"
+            : "准备成为大事的一部分吗?"
         }
         language={language}
         link={"/about#contact"}

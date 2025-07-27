@@ -66,3 +66,26 @@ export const DRIVE_CN = [
     desc: "准备扩展至马来西亚、新加坡和泰国",
   },
 ];
+
+export const DRIVE_KR = [
+  {
+    icon: "/drive-us/bold.svg",
+    title: "대담한 통합",
+    desc: "물류 + 마케팅 = 최대 효율",
+  },
+  {
+    icon: "/drive-us/transparent.svg",
+    title: "투명성",
+    desc: "문화적 또는 규제 장벽 없음",
+  },
+  {
+    icon: "/drive-us/speed.svg",
+    title: "표준으로서의 속도",
+    desc: "첫날부터 판매 시작",
+  },
+  {
+    icon: "/drive-us/handshake.svg",
+    title: "파트너십",
+    desc: "말레이시아, 싱가포르, 태국으로의 확장 준비 완료",
+  },
+];

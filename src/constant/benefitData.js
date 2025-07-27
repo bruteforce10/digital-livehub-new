@@ -120,3 +120,44 @@ export const BENEFIT_CN = [
     mobile: {},
   },
 ];
+
+export const BENEFIT_TITLE_KR = "인도네시아가 당신의 다음 큰 기회인 이유";
+
+export const BENEFIT_KR = [
+  {
+    value: "4th",
+    label: "세계의 4번째 인구군",
+    desktop: {
+      className:
+        "left-0 top-0 absolute bg-gradient-to-b from-white/80 via-white/50 to-white/10 rounded-lg px-8 py-4 backdrop-blur-lg",
+    },
+    mobile: {},
+  },
+  {
+    value: "$1.3T",
+    label: "가장 총은 쇼핑마켓",
+    desktop: {
+      className:
+        "-right-8 top-32 absolute bg-gradient-to-b from-white/80 via-white/50 to-white/10 rounded-lg px-8 py-4 backdrop-blur-lg",
+    },
+    mobile: {},
+  },
+  {
+    value: "1.7억+",
+    label: "월간 인터넷 및 소셜 미디어 사용자",
+    desktop: {
+      className:
+        "bottom-24 left-0 absolute bg-gradient-to-b from-white/80 via-white/50 to-white/10 rounded-lg px-8 py-4 backdrop-blur-lg",
+    },
+    mobile: {},
+  },
+  {
+    value: "게이트웨이",
+    label: "동남아시아 시장으로의 관문",
+    desktop: {
+      className:
+        "bottom-12 right-32 absolute bg-gradient-to-b from-white/80 via-white/50 to-white/10 rounded-lg px-8 py-4 backdrop-blur-lg",
+    },
+    mobile: {},
+  },
+];

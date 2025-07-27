@@ -1,6 +1,7 @@
 export const WHYDATA_TITLE_EN = "Why Choose Us?";
 export const WHYDATA_TITLE_ID = "Mengapa Memilih Kami?";
 export const WHYDATA_TITLE_CN = "为什么选择我们？";
+export const WHYDATA_TITLE_KR = "왜 우리를 선택해야 할까요?";
 
 export const WHYDATA_EN = [
   {
@@ -68,5 +69,28 @@ export const WHYDATA_CN = [
     icon: "/why/scale.svg",
     title: "扩展支持",
     desc: "可拓展至马来西亚、新加坡、泰国",
+  },
+];
+
+export const WHYDATA_KR = [
+  {
+    icon: "/why/integrated.svg",
+    title: "통합 플랩",
+    desc: "물류 + 마케팅 = 최대 효율",
+  },
+  {
+    icon: "/why/local.svg",
+    title: "종합적인 실행",
+    desc: "무문화 или 정리 과제",
+  },
+  {
+    icon: "/why/fast.svg",
+    title: "빠른 ROI",
+    desc: "첫날부터 판매 시작",
+  },
+  {
+    icon: "/why/scale.svg",
+    title: "확장 지원",
+    desc: "말레이시아, 싱가포르, 태국으로 확장 준비 완료",
   },
 ];

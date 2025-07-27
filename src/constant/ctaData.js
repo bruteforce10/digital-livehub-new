@@ -15,3 +15,9 @@ export const CTADATA_CN = {
   desc: "让我们探索您的品牌如何在印度尼西亚和东南亚取得成功",
   link: "/services#packages",
 };
+
+export const CTADATA_KR = {
+  title: "동남아시아에 추측 없이 진출할 준비가 되셨나요?",
+  desc: "인도네시아와 동남아시아에서 귀사의 브랜드가 성공할 수 있는 방법을 알아봅시다",
+  link: "/services#packages",
+};

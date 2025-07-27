@@ -8,8 +8,12 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import { useAtom } from "jotai";
+import { languageAtom } from "@/lib/languageAtom";
 
 export default function HiroAbout() {
+  const [language] = useAtom(languageAtom);
+
   return (
     <section
       className="-mt-24 pt-45 bg-gray-50 py-32 relative overflow-hidden border-b-2 border-primary-custom"
@@ -29,10 +33,24 @@ export default function HiroAbout() {
                 "linear-gradient(45deg, #E96E4D 0%, #D4346A 52%, #644B86 100%)",
             }}
           >
-            Meet the team
+            {language === "EN"
+              ? "Meet the team"
+              : language === "ID"
+              ? "Bertemu Tim"
+              : language === "CN"
+              ? "认识团队"
+              : "팀 소개"}
             <br />
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl">Home/About Us</p>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+            {language === "EN"
+              ? "Home/About Us"
+              : language === "ID"
+              ? "Beranda/Tentang Kami"
+              : language === "CN"
+              ? "主页/关于我们"
+              : "홈/회사 소개"}
+          </p>
         </div>
         <div className="order-1 md:order-2">
           <Carousel

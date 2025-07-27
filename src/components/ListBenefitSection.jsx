@@ -5,82 +5,12 @@ import { Card, CardContent } from "./ui/card";
 import { languageAtom } from "@/lib/languageAtom";
 import { useAtom } from "jotai";
 import EachUtils from "@/lib/EachUtils";
-import { STRATEGY_CN, STRATEGY_EN, STRATEGY_ID } from "@/constant/strategyData";
-
-const benefits = [
-  {
-    title: "Social Media & Community",
-    image: "/digital-strategy/social-media.png",
-    alt: "Social Media & Community",
-    items: [
-      "Content strategy development",
-      "Community management",
-      "Social media advertising",
-      "Influencer partnerships",
-      "Engagement optimization",
-    ],
-  },
-  {
-    title: "Content Creation",
-    image: "/digital-strategy/content-creator.gif",
-    alt: "Content Creation",
-    items: [
-      "Professional photography",
-      "Video production",
-      "Graphic design",
-      "Copywriting",
-      "Brand storytelling",
-    ],
-  },
-  {
-    title: "KOL & Influencer Campaigns",
-    image: "/digital-strategy/kol-review.gif",
-    alt: "KOL & Influencer Campaigns",
-    items: [
-      "Influencer identification",
-      "Campaign strategy",
-      "Content collaboration",
-      "Performance tracking",
-      "ROI optimization",
-    ],
-  },
-  {
-    title: "Affiliate Marketing",
-    image: "/digital-strategy/affiliate-marketing.png",
-    alt: "Affiliate Marketing",
-    items: [
-      "Affiliate network development",
-      "Commission structure design",
-      "Performance monitoring",
-      "Partner recruitment",
-      "Training programs",
-    ],
-  },
-  {
-    title: "Live Streaming",
-    image: "/digital-strategy/live-streaming.gif",
-    alt: "Live Streaming",
-    items: [
-      "Live commerce setup",
-      "Host training",
-      "Technical support",
-      "Audience engagement",
-      "Sales conversion optimization",
-    ],
-  },
-  {
-    title: "Ads Management",
-    image: "/digital-strategy/ads-management.png",
-    alt: "Ads Management",
-    items: [
-      "Google Ads optimization",
-      "Facebook & Instagram ads",
-      "TikTok advertising",
-      "Performance analytics",
-      "Budget optimization",
-    ],
-  },
-];
+import {
+  STRATEGY_CN,
+  STRATEGY_EN,
+  STRATEGY_ID,
+  STRATEGY_KR,
+} from "@/constant/strategyData";
 
 export default function ListBenefitSection() {
   const [language] = useAtom(languageAtom);
@@ -93,7 +23,9 @@ export default function ListBenefitSection() {
             ? "Digital Strategy & Execution"
             : language === "ID"
             ? "Strategi Digital & Eksekusi"
-            : "数字策略与执行"}
+            : language === "KR"
+            ? "디지털 전략 및 실행"
+            : "数字战略与执行"}
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -103,6 +35,8 @@ export default function ListBenefitSection() {
                 ? STRATEGY_EN
                 : language === "ID"
                 ? STRATEGY_ID
+                : language === "KR"
+                ? STRATEGY_KR
                 : STRATEGY_CN
             }
             render={(benefit) => (

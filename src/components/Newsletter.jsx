@@ -6,6 +6,7 @@ import {
   NEWSLETTER_CN,
   NEWSLETTER_EN,
   NEWSLETTER_ID,
+  NEWSLETTER_KR,
 } from "@/constant/newsletterData";
 
 export default function NewsletterSection() {
@@ -20,14 +21,18 @@ export default function NewsletterSection() {
               ? NEWSLETTER_EN.title
               : language === "ID"
               ? NEWSLETTER_ID.title
-              : NEWSLETTER_CN.title}
+              : language === "CN"
+              ? NEWSLETTER_CN.title
+              : NEWSLETTER_KR.title}
           </h2>
           <p className="mb-8 max-w-[400px] mx-auto text-md">
             {language === "EN"
               ? NEWSLETTER_EN.description
               : language === "ID"
               ? NEWSLETTER_ID.description
-              : NEWSLETTER_CN.description}
+              : language === "CN"
+              ? NEWSLETTER_CN.description
+              : NEWSLETTER_KR.description}
           </p>
         </div>
         <div className="flex gap-2 lg:flex-[.6] max-lg:max-w-[400px] w-full mx-auto">
@@ -37,7 +42,9 @@ export default function NewsletterSection() {
                 ? NEWSLETTER_EN.placeholder
                 : language === "ID"
                 ? NEWSLETTER_ID.placeholder
-                : NEWSLETTER_CN.placeholder
+                : language === "CN"
+                ? NEWSLETTER_CN.placeholder
+                : NEWSLETTER_KR.placeholder
             }
             className="bg-white text-gray-900 border-0 w-full h-12"
           />
@@ -46,7 +53,9 @@ export default function NewsletterSection() {
               ? NEWSLETTER_EN.buttonText
               : language === "ID"
               ? NEWSLETTER_ID.buttonText
-              : NEWSLETTER_CN.buttonText}
+              : language === "CN"
+              ? NEWSLETTER_CN.buttonText
+              : NEWSLETTER_KR.buttonText}
           </Button>
         </div>
       </div>

@@ -2,9 +2,11 @@ import {
   EVOLUTION_CN,
   EVOLUTION_EN,
   EVOLUTION_ID,
+  EVOLUTION_KR,
   EVOLUTION_TITLE_CN,
   EVOLUTION_TITLE_EN,
   EVOLUTION_TITLE_ID,
+  EVOLUTION_TITLE_KR,
 } from "@/constant/evolutionData";
 import EachUtils from "@/lib/EachUtils";
 import { languageAtom } from "@/lib/languageAtom";
@@ -40,7 +42,9 @@ const EvolutionSection = () => {
             ? EVOLUTION_TITLE_EN
             : language === "ID"
             ? EVOLUTION_TITLE_ID
-            : EVOLUTION_TITLE_CN}
+            : language === "CN"
+            ? EVOLUTION_TITLE_CN
+            : EVOLUTION_TITLE_KR}
         </h2>
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12 relative">
@@ -51,7 +55,9 @@ const EvolutionSection = () => {
                   ? EVOLUTION_EN
                   : language === "ID"
                   ? EVOLUTION_ID
-                  : EVOLUTION_CN
+                  : language === "CN"
+                  ? EVOLUTION_CN
+                  : EVOLUTION_KR
               }
               render={(item, index) => (
                 <TimelineItem key={item.year} {...item} />

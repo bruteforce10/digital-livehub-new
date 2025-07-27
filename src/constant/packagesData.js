@@ -91,3 +91,36 @@ export const PACKAGES_CN = [
     popular: true,
   },
 ];
+
+export const PACKAGES_KR = [
+  {
+    name: "마켓 입장 패키지",
+    features: [
+      "브람 회원가입",
+      "기초 매장설치",
+      "기초 인벤터리 관리",
+      "기초 매장마켓",
+    ],
+    popular: false,
+  },
+  {
+    name: "지역 확장 패키지",
+    features: [
+      "다언 매장폰스",
+      "고급 인벤터리 시스템",
+      "종합한 매장마켓",
+      "리셋 네트워크 저지",
+    ],
+    popular: false,
+  },
+  {
+    name: "급속 확장 패키지",
+    features: [
+      "플런스 서비스",
+      "AI 렌더링",
+      "군제 매장 확장",
+      "특별한 고객 관리자",
+    ],
+    popular: true,
+  },
+];

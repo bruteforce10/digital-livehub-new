@@ -2,9 +2,11 @@ import {
   TABLE_CN,
   TABLE_EN,
   TABLE_ID,
+  TABLE_KR,
   TABLE_TITLE_CN,
   TABLE_TITLE_EN,
   TABLE_TITLE_ID,
+  TABLE_TITLE_KR,
 } from "@/constant/tableData";
 import EachUtils from "@/lib/EachUtils";
 import { languageAtom } from "@/lib/languageAtom";
@@ -22,7 +24,9 @@ export default function TableSection() {
             ? TABLE_TITLE_EN
             : language === "ID"
             ? TABLE_TITLE_ID
-            : TABLE_TITLE_CN}
+            : language === "CN"
+            ? TABLE_TITLE_CN
+            : TABLE_TITLE_KR}
         </h2>
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3">
@@ -32,7 +36,9 @@ export default function TableSection() {
                   ? TABLE_EN
                   : language === "ID"
                   ? TABLE_ID
-                  : TABLE_CN
+                  : language === "CN"
+                  ? TABLE_CN
+                  : TABLE_KR
               }
               render={(col) => (
                 <div className={col.boxClass} key={col.title}>

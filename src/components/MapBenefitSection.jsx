@@ -2,9 +2,11 @@ import {
   BENEFIT_CN,
   BENEFIT_EN,
   BENEFIT_ID,
+  BENEFIT_KR,
   BENEFIT_TITLE_CN,
   BENEFIT_TITLE_EN,
   BENEFIT_TITLE_ID,
+  BENEFIT_TITLE_KR,
 } from "@/constant/benefitData";
 import EachUtils from "@/lib/EachUtils";
 import { languageAtom } from "@/lib/languageAtom";
@@ -26,7 +28,9 @@ export default function MapBenefitSection() {
             ? BENEFIT_TITLE_EN
             : language === "ID"
             ? BENEFIT_TITLE_ID
-            : BENEFIT_TITLE_CN}
+            : language === "CN"
+            ? BENEFIT_TITLE_CN
+            : BENEFIT_TITLE_KR}
         </h2>
         <div className="relative max-w-4xl mx-auto">
           <div className="relative w-full h-[400px]">
@@ -37,7 +41,9 @@ export default function MapBenefitSection() {
                   ? BENEFIT_EN
                   : language === "ID"
                   ? BENEFIT_ID
-                  : BENEFIT_CN
+                  : language === "CN"
+                  ? BENEFIT_CN
+                  : BENEFIT_KR
               }
               render={(b, i) => (
                 <div
@@ -61,7 +67,9 @@ export default function MapBenefitSection() {
                   ? BENEFIT_EN
                   : language === "ID"
                   ? BENEFIT_ID
-                  : BENEFIT_CN
+                  : language === "CN"
+                  ? BENEFIT_CN
+                  : BENEFIT_KR
               }
               render={(b, i) => (
                 <div className="bg-white/20 rounded-lg p-4" key={i}>

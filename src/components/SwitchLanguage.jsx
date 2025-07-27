@@ -1,4 +1,10 @@
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useAtom } from "jotai";
 import { languageAtom } from "@/lib/languageAtom";
 
@@ -13,6 +19,7 @@ const SwitchLanguage = () => {
         <SelectItem value="EN">EN</SelectItem>
         <SelectItem value="ID">ID</SelectItem>
         <SelectItem value="CN">CN</SelectItem>
+        <SelectItem value="KR">KR</SelectItem>
       </SelectContent>
     </Select>
   );

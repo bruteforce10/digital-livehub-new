@@ -2,6 +2,7 @@ export const ENDTOENDATA_TITLE_EN = "End-to-End Market Launch & Growth Support";
 export const ENDTOENDATA_TITLE_ID =
   "Dukungan Peluncuran & Pertumbuhan Pasar End-to-End";
 export const ENDTOENDATA_TITLE_CN = "端到端市场启动与增长支持";
+export const ENDTOENDATA_TITLE_KR = "엔드 투 엔드 시장 출시 및 성장 지원";
 
 export const ENDTOENDATA_EN = [
   {
@@ -107,6 +108,42 @@ export const ENDTOENDATA_CN = [
       "内容创作与社交媒体",
       "付费广告与网红营销",
       "效果分析与优化",
+    ],
+  },
+];
+
+export const ENDTOENDATA_KR = [
+  {
+    icon: "/end-to-end/task.svg",
+    alt: "정리",
+    title: "정리와 연습",
+    items: [
+      "브란드 등록와 학인 연습",
+      "이원 관리와 집계설정",
+      "고객 관리와 고객관리",
+      "주문 처리와 고객 서비스",
+    ],
+  },
+  {
+    icon: "/end-to-end/user.svg",
+    alt: "분포",
+    title: "분포넌트워크",
+    items: [
+      "마켓팅피아스(Shopee, Tokopedia, Lazada)",
+      "레티트 챌린지",
+      "다이렉트 토피어 챌린지",
+      "B2B销售与分销",
+    ],
+  },
+  {
+    icon: "/end-to-end/goal.svg",
+    alt: "디지털화",
+    title: "디지털화 전략와 실행",
+    items: [
+      "브란드 위치와 메시지링",
+      "커널트 생성와 소셀어",
+      "패이드 인플런스 매맑",
+      "효과 분석와 최적화",
     ],
   },
 ];

@@ -138,3 +138,50 @@ export const REGULATORY_CN = [
     ],
   },
 ];
+
+export const REGULATORY_KR = [
+  {
+    icon: "/operation/consumble.svg",
+    title: "마켓팅 등록 및 합성평가",
+    items: [
+      "브랜드 등록 및 상표 보호",
+      "합성평가 프로세스",
+      "BPOM 등록",
+      "제품 준수 검증",
+      "규제 문서화",
+    ],
+  },
+  {
+    icon: "/operation/to-do-list.svg",
+    title: "원반 고객 관리",
+    items: [
+      "스터디 고객 위치선택",
+      "실시간 원반 추적",
+      "품질 관리 프로세스",
+      "온도 조절 저장",
+      "자동 재주문 시스템",
+    ],
+  },
+  {
+    icon: "/operation/supply-chain.svg",
+    title: "수입 및 준수 프로세스",
+    items: [
+      "수입 허가 취득",
+      "세관 통관",
+      "세금 최적화 전략",
+      "문서 관리",
+      "규제 준수 모니터링",
+    ],
+  },
+  {
+    icon: "/operation/consumble.svg",
+    title: "주문 이행",
+    items: [
+      "당일 처리",
+      "다중 채널 통합",
+      "마지막 마일 배송 최적화",
+      "반품 관리",
+      "고객 서비스 지원",
+    ],
+  },
+];

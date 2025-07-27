@@ -1,4 +1,9 @@
-import { VISION_CN, VISION_EN, VISION_ID } from "@/constant/visiData";
+import {
+  VISION_CN,
+  VISION_EN,
+  VISION_ID,
+  VISION_KR,
+} from "@/constant/visiData";
 import EachUtils from "@/lib/EachUtils";
 import { languageAtom } from "@/lib/languageAtom";
 import { useAtom } from "jotai";
@@ -22,7 +27,9 @@ export default function VisiSection() {
                 ? VISION_EN
                 : language === "ID"
                 ? VISION_ID
-                : VISION_CN
+                : language === "CN"
+                ? VISION_CN
+                : VISION_KR
             }
             render={(item, index) => (
               <div

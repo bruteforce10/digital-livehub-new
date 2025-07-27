@@ -90,3 +90,30 @@ export const SOLVE_CN = [
     isAfter: true,
   },
 ];
+
+export const SOLVE_KR = [
+  {
+    title: "전통 모델",
+    titleClass: "",
+    cardClass: "p-6",
+    items: [
+      { text: "유통 또는 마케팅 중 하나를 선택해야 함" },
+      { text: "다수의 공급업체, 복잡한 조정" },
+      { text: "시장 진입이 느리고 초기 비용이 높음" },
+      { text: "문화적 차이, 규제 위험" },
+    ],
+    isAfter: false,
+  },
+  {
+    title: "Digital LiveHub",
+    titleClass: "text-transparent bg-clip-text",
+    cardClass: "p-6 bg-pink-50 border-pink-200",
+    items: [
+      { text: "유통 + 마케팅 통합", icon: true },
+      { text: "단일 파트너, 원활한 실행", icon: true },
+      { text: "빠른 시장 진입, 즉각적인 ROI", icon: true },
+      { text: "현지 전문성, 예기치 않은 위험 없음", icon: true },
+    ],
+    isAfter: true,
+  },
+];

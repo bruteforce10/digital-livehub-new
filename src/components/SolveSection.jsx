@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 import { languageAtom } from "@/lib/languageAtom";
 import { useAtom } from "jotai";
 import EachUtils from "@/lib/EachUtils";
-import { SOLVE_CN, SOLVE_EN, SOLVE_ID } from "@/constant/solveData";
+import { SOLVE_CN, SOLVE_EN, SOLVE_ID, SOLVE_KR } from "@/constant/solveData";
 
 export default function SolveSection() {
   const [language] = useAtom(languageAtom);
@@ -16,11 +16,18 @@ export default function SolveSection() {
             ? "The Problem We Solve"
             : language === "ID"
             ? "Masalah yang Kami Selesaikan"
+            : language === "KR"
+            ? "해결하는 문제"
             : "我们解决的问题"}
         </h2>
         <p className="text-lg text-center mb-12 mx-auto">
-          Breaking into a new market is never easy, especially in Southeast
-          Asia. Brands often face:
+          {language === "EN"
+            ? "In today's fast-paced digital landscape, brands face numerous challenges that hinder their growth and success. From navigating complex digital ecosystems to reaching the right audience, the hurdles are many. We understand these challenges deeply and are committed to providing solutions that empower brands to thrive."
+            : language === "ID"
+            ? "Di era digital yang serba cepat saat ini, merek menghadapi berbagai tantangan yang menghambat pertumbuhan dan kesuksesan mereka. Dari menavigasi ekosistem digital yang kompleks hingga menjangkau audiens yang tepat, rintangan yang dihadapi sangat banyak. Kami memahami tantangan ini dengan baik dan berkomitmen untuk menyediakan solusi yang memberdayakan merek untuk berkembang."
+            : language === "KR"
+            ? "오늘날의 빠르게 변화하는 디지털 환경에서 브랜드는 성장과 성공을 방해하는 수많은 도전에 직면해 있습니다. 복잡한 디지털 생태계를 탐색하는 것부터 올바른 청중에게 도달하는 것까지, 장애물은 많습니다. 우리는 이러한 도전을 깊이 이해하고 브랜드가 번창할 수 있도록 하는 솔루션을 제공하기 위해 최선을 다하고 있습니다."
+            : "在当今快速发展的数字环境中，品牌面临着许多阻碍其增长和成功的挑战。从应对复杂的数字生态系统到触及正确的受众，障碍重重。我们深刻理解这些挑战，并致力于提供能够帮助品牌蓬勃发展的解决方案。"}
         </p>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
@@ -30,7 +37,9 @@ export default function SolveSection() {
                   ? SOLVE_EN
                   : language === "ID"
                   ? SOLVE_ID
-                  : SOLVE_CN
+                  : language === "CN"
+                  ? SOLVE_CN
+                  : SOLVE_KR
               }
               render={(card, index) => (
                 <Card className={card.cardClass} key={card.title}>
@@ -73,10 +82,13 @@ export default function SolveSection() {
             />
           </div>
           <p className="text-md text-muted-foreground text-center mt-10 mx-auto">
-            We exist to eliminate these barriers and transform complexity into
-            clarity . Our role is to help brands grow faster, stronger, and
-            without borders. Most importantly, we grow together. Every challenge
-            is ours to solve, because we win by helping you grow
+            {language === "EN"
+              ? "By addressing these challenges, we empower brands to not only survive but thrive in the digital age. Our solutions are designed to simplify complexities, enhance visibility, and drive meaningful engagement with audiences. Together, we can navigate the digital landscape and unlock new opportunities for growth."
+              : language === "ID"
+              ? "Dengan mengatasi tantangan-tantangan ini, kami memberdayakan merek untuk tidak hanya bertahan tetapi juga berkembang di era digital. Solusi kami dirancang untuk menyederhanakan kompleksitas, meningkatkan visibilitas, dan mendorong keterlibatan yang bermakna dengan audiens. Bersama-sama, kita dapat menavigasi lanskap digital dan membuka peluang baru untuk pertumbuhan."
+              : language === "KR"
+              ? "이러한 도전을 해결함으로써 우리는 브랜드가 디지털 시대에 단순히 생존하는 것을 넘어 번창할 수 있도록 합니다. 우리의 솔루션은 복잡성을 단순화하고 가시성을 향상시키며 청중과의 의미 있는 참여를 촉진하도록 설계되었습니다. 함께 디지털 환경을 탐색하고 성장의 새로운 기회를 열 수 있습니다."
+              : "通过解决这些挑战，我们使品牌不仅能够生存，而且能够在数字时代蓬勃发展。我们的解决方案旨在简化复杂性、增强可见性，并推动与受众的有意义互动。让我们共同导航数字环境，开启新的增长机会。"}
           </p>
         </div>
       </div>
