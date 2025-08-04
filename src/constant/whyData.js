@@ -1,7 +1,7 @@
 export const WHYDATA_TITLE_EN = "Why Choose Us?";
 export const WHYDATA_TITLE_ID = "Mengapa Memilih Kami?";
 export const WHYDATA_TITLE_CN = "为什么选择我们？";
-export const WHYDATA_TITLE_KR = "왜 우리를 선택해야 할까요?";
+export const WHYDATA_TITLE_KR = "왜 우리를 선택해야 하나요 ?";
 
 export const WHYDATA_EN = [
   {
@@ -22,7 +22,7 @@ export const WHYDATA_EN = [
   {
     icon: "/why/scale.svg",
     title: "Scale Support",
-    desc: "Ready for expansion to Malaysia, Singapore, Thailand",
+    desc: "Ready for expansion to Malaysia, Singapore",
   },
 ];
 
@@ -45,7 +45,7 @@ export const WHYDATA_ID = [
   {
     icon: "/why/scale.svg",
     title: "Dukungan Skalabilitas",
-    desc: "Siap ekspansi ke Malaysia, Singapura, Thailand",
+    desc: "Siap ekspansi ke Malaysia, Singapura",
   },
 ];
 
@@ -75,13 +75,13 @@ export const WHYDATA_CN = [
 export const WHYDATA_KR = [
   {
     icon: "/why/integrated.svg",
-    title: "통합 플랩",
+    title: "통합솔루션",
     desc: "물류 + 마케팅 = 최대 효율",
   },
   {
     icon: "/why/local.svg",
-    title: "종합적인 실행",
-    desc: "무문화 или 정리 과제",
+    title: "현지 실행 전문성",
+    desc: "문화적·규제적 장벽 없이 실행 가능",
   },
   {
     icon: "/why/fast.svg",
@@ -91,6 +91,6 @@ export const WHYDATA_KR = [
   {
     icon: "/why/scale.svg",
     title: "확장 지원",
-    desc: "말레이시아, 싱가포르, 태국으로 확장 준비 완료",
+    desc: "말레이시아 , 싱가포르 진출 준비 완료",
   },
 ];

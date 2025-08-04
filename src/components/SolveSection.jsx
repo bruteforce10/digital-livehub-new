@@ -26,7 +26,7 @@ export default function SolveSection() {
             : language === "ID"
             ? "Di era digital yang serba cepat saat ini, merek menghadapi berbagai tantangan yang menghambat pertumbuhan dan kesuksesan mereka. Dari menavigasi ekosistem digital yang kompleks hingga menjangkau audiens yang tepat, rintangan yang dihadapi sangat banyak. Kami memahami tantangan ini dengan baik dan berkomitmen untuk menyediakan solusi yang memberdayakan merek untuk berkembang."
             : language === "KR"
-            ? "오늘날의 빠르게 변화하는 디지털 환경에서 브랜드는 성장과 성공을 방해하는 수많은 도전에 직면해 있습니다. 복잡한 디지털 생태계를 탐색하는 것부터 올바른 청중에게 도달하는 것까지, 장애물은 많습니다. 우리는 이러한 도전을 깊이 이해하고 브랜드가 번창할 수 있도록 하는 솔루션을 제공하기 위해 최선을 다하고 있습니다."
+            ? "오늘날 빠르게 변화하는 디지털 환경 속에서 브랜드들은 성장을 저해하는 다양한 도전에 직면해 있습니다. 복잡한 디지털 생태계를 파악하거나 올바른 타겟 고객에게 도달하는 일까지, 장애물은 매우 많습니다. 우리는 이러한 문제를 깊이 이해하고 있으며, 브랜드가 디지털 시대에서 단순히 생존을 넘어서 성장하고 확장할 수 있도록 돕는 솔루션을 제공합니다."
             : "在当今快速发展的数字环境中，品牌面临着许多阻碍其增长和成功的挑战。从应对复杂的数字生态系统到触及正确的受众，障碍重重。我们深刻理解这些挑战，并致力于提供能够帮助品牌蓬勃发展的解决方案。"}
         </p>
         <div className="max-w-6xl mx-auto">
@@ -87,7 +87,7 @@ export default function SolveSection() {
               : language === "ID"
               ? "Dengan mengatasi tantangan-tantangan ini, kami memberdayakan merek untuk tidak hanya bertahan tetapi juga berkembang di era digital. Solusi kami dirancang untuk menyederhanakan kompleksitas, meningkatkan visibilitas, dan mendorong keterlibatan yang bermakna dengan audiens. Bersama-sama, kita dapat menavigasi lanskap digital dan membuka peluang baru untuk pertumbuhan."
               : language === "KR"
-              ? "이러한 도전을 해결함으로써 우리는 브랜드가 디지털 시대에 단순히 생존하는 것을 넘어 번창할 수 있도록 합니다. 우리의 솔루션은 복잡성을 단순화하고 가시성을 향상시키며 청중과의 의미 있는 참여를 촉진하도록 설계되었습니다. 함께 디지털 환경을 탐색하고 성장의 새로운 기회를 열 수 있습니다."
+              ? "이러한 문제들을 해결함으로써, 우리는 브랜드가 디지털 시대에 단순히 생존하는 것을 넘어 진정으로 성장할 수 있도록 돕습니다. 우리의 솔루션은 복잡한 과정을 단순화하고, 브랜드의 가시성과 고객과 의의미 있는 소통을 강화하도록 설계되었습니다. 함께 디지털 환경을 효과적으로 탐색하고, 새로운 성장 기회를 열어갈 수 있습니다."
               : "通过解决这些挑战，我们使品牌不仅能够生存，而且能够在数字时代蓬勃发展。我们的解决方案旨在简化复杂性、增强可见性，并推动与受众的有意义互动。让我们共同导航数字环境，开启新的增长机会。"}
           </p>
         </div>

@@ -79,7 +79,7 @@ export default function GetInTouchSection() {
             : language === "ID"
             ? "Hubungi Kami"
             : language === "KR"
-            ? "연락하시기"
+            ? "지금 문의하세요."
             : "联系我们"}
         </h2>
         <p className="text-center text-gray-600 mb-16">
@@ -88,7 +88,7 @@ export default function GetInTouchSection() {
             : language === "ID"
             ? "Siap Menjadi Bagian dari Sesuatu yang Besar?"
             : language === "KR"
-            ? "큰 일의 일부가 될 준비가 되셨나요?"
+            ? "함께 더 큰 성공을 만들어갈 준비가 되 셨나요?"
             : "准备成为大事的一部分吗?"}
         </p>
         <div className="grid md:grid-cols-2 gap-8 mb-12">

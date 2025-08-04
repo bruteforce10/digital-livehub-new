@@ -25,6 +25,6 @@ export const NEWSLETTER_KR = {
   title: "뉴스레터 구독하기",
   description:
     "인도네시아 및 동남아시아의 최신 기회에 대한 업데이트, 팁 및 트렌드를 구독하세요",
-  placeholder: "이메일을 입력하세요",
+  placeholder: "이메일 주소를 입력해주세요",
   buttonText: "구독",
 };

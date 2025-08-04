@@ -17,7 +17,7 @@ export const CTADATA_CN = {
 };
 
 export const CTADATA_KR = {
-  title: "동남아시아에 추측 없이 진출할 준비가 되셨나요?",
-  desc: "인도네시아와 동남아시아에서 귀사의 브랜드가 성공할 수 있는 방법을 알아봅시다",
+  title: "동남아시아 시장에 대한 확신을 가지고 진출할 준비가 되셨나요 ?",
+  desc: "이제 인도네시아 및 동남아시아 시장에서 귀사의 브랜드가 성공할 수 있는 길을 함께 찾아보세요",
   link: "/services#packages",
 };

@@ -5,6 +5,75 @@ import Link from "next/link";
 import { useAtom } from "jotai";
 import { languageAtom } from "@/lib/languageAtom";
 
+const officeLocationID = [
+  {
+    country: "Indonesia",
+    address: "Gd. Agro Plaza Kuningan, Jakarta Selatan, Indonesia",
+    type: "HQ",
+  },
+  {
+    country: "Indonesia",
+    address: "Mega Bekasi Hypermall Lt. 1, Bekasi, Indonesia",
+    type: "Live Studio",
+  },
+  {
+    country: "Malaysia",
+    address: "Lvl 4-1, Sunway Putra Mall, KL",
+    type: "",
+  },
+  {
+    country: "Singapore",
+    address: "190 Clemenceau Avenue #06-01",
+    type: "",
+  },
+];
+
+const officeLocationKR = [
+  {
+    country: "인도네시아 본사",
+    address: "Gd. Agro Plaza Kuningan",
+    type: "자카르타 셀라탄",
+  },
+  {
+    country: "인도네시아 라이브 스튜디오",
+    address: "Mega Bekasi Hypermall 1 층",
+    type: "브카시",
+  },
+  {
+    country: "🇾말레이시아",
+    address: "Lvl 4-1, Sunway Putra Mall",
+    type: "쿠알라룸",
+  },
+  {
+    country: "싱가포르",
+    address: "190 Clemenceau Avenue #06-01",
+    type: "",
+  },
+];
+
+const contactInfo = {
+  EN: {
+    email: "marketing@digitallivehub.id",
+    phone: "+62 857 1138 1050",
+    location: "Jakarta, Indonesia",
+  },
+  ID: {
+    email: "marketing@digitallivehub.id",
+    phone: "+62 857 1138 1050",
+    location: "Jakarta, Indonesia",
+  },
+  CN: {
+    email: "marketing@digitallivehub.id",
+    phone: "+62 857 1138 1050",
+    location: "Jakarta, Indonesia",
+  },
+  KR: {
+    email: "이메일: marketing@digitallivehub.id",
+    phone: "전화: +62 857 1138 1050",
+    location: "자카르타,인도네시아",
+  },
+};
+
 export default function FooterSection() {
   const [language] = useAtom(languageAtom);
 
@@ -26,7 +95,9 @@ export default function FooterSection() {
                 ? "Services"
                 : language === "ID"
                 ? "Layanan"
-                : "服务"}
+                : language === "CN"
+                ? "服务"
+                : "패키지"}
             </h4>
             <ul className="space-y-2 text-gray-600">
               <li>
@@ -35,7 +106,9 @@ export default function FooterSection() {
                     ? "Packages"
                     : language === "ID"
                     ? "Paket"
-                    : "套餐"}
+                    : language === "CN"
+                    ? "套餐"
+                    : "패키지"}
                 </Link>
               </li>
               <li>
@@ -44,7 +117,9 @@ export default function FooterSection() {
                     ? "Our Programs"
                     : language === "ID"
                     ? "Program Kami"
-                    : "我们的计划"}
+                    : language === "CN"
+                    ? "我们的项目"
+                    : "프로그램"}
                 </Link>
               </li>
             </ul>
@@ -55,19 +130,24 @@ export default function FooterSection() {
                 ? "We Can't Wait to Hear From You!"
                 : language === "ID"
                 ? "Kami Tidak Sabar Mendengar Dari Anda!"
-                : "我们期待听到您的消息！"}
+                : language === "CN"
+                ? "我们迫不及待想听到您的声音！"
+                : "여러분의 소식을 기다리고 있습니다 !"}
             </h4>
             <ul className="space-y-2 list-disc text-muted-foreground text-sm">
-              <li>
-                Indonesia: Gd. Agro Plaza Kuningan, Jakarta Selatan, Indonesia -
-                HQ
-              </li>
-              <li>
-                Indonesia: Mega Bekasi Hypermall Lt. 1, Bekasi, Indonesia - Live
-                Studio
-              </li>
-              <li>Malaysia: Lvl 4-1, Sunway Putra Mall, KL</li>
-              <li>Singapore: 190 Clemenceau Avenue #06-01</li>
+              {language === "KR"
+                ? officeLocationKR.map((location, index) => (
+                    <li key={index}>
+                      {location.country}: {location.address}
+                      {location.type && ` - ${location.type}`}
+                    </li>
+                  ))
+                : officeLocationID.map((location, index) => (
+                    <li key={index}>
+                      {location.country}: {location.address}
+                      {location.type && ` - ${location.type}`}
+                    </li>
+                  ))}
             </ul>
           </div>
           <div>
@@ -79,11 +159,11 @@ export default function FooterSection() {
                 : "联系我们"}
             </h4>
             <p className="text-gray-600 text-sm">
-              Email: marketing@digitallivehub.id
+              {contactInfo[language].email}
               <br />
-              Phone: +62 857 1138 1050
+              {contactInfo[language].phone}
               <br />
-              Jakarta, Indonesia
+              {contactInfo[language].location}
             </p>
           </div>
         </div>

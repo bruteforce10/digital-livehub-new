@@ -1,7 +1,7 @@
 export const EVOLUTION_TITLE_EN = "Company Evolution Timeline";
 export const EVOLUTION_TITLE_ID = "Evolusi Perusahaan";
 export const EVOLUTION_TITLE_CN = "公司演化时间轴";
-export const EVOLUTION_TITLE_KR = "회사 발전 연대기";
+export const EVOLUTION_TITLE_KR = "회사성장연혁";
 
 export const EVOLUTION_EN = [
   {
@@ -75,19 +75,19 @@ export const EVOLUTION_KR = [
   {
     year: "2023",
     title: "B2B 비즈니스",
-    description: "비즈니스 고객을 위한 B2B 중심 회사로 시작",
+    description: "B2B 고객 중심의 비즈니스로 시작",
     gradient: "from-purple-700 to-pink-500",
   },
   {
     year: "2024",
     title: "디지털 마케팅",
-    description: "종합 디지털 마케팅 솔루션으로 확장",
+    description: "디지털 마케팅 통합 솔루션으로 확장",
     gradient: "from-pink-500 to-purple-600",
   },
   {
     year: "2025",
     title: "AI 기반 & 국제 시장",
-    description: "글로벌 시장 확장을 위한 AI 기반 솔루션 제공",
+    description: "AI 기반 글로벌 시장 진출",
     gradient: "from-pink-600 to-red-500",
     isHighlighted: true,
   },

@@ -33,7 +33,7 @@ export default function AboutPage() {
             : language === "ID"
             ? "Temukan Kekuatan Layanan Kami"
             : language === "KR"
-            ? "사용가능성을 찾아보자"
+            ? "우리 서비스의 강점을 확인해보세요"
             : "发现我们的服务力量"
         }
         desc={
@@ -42,7 +42,7 @@ export default function AboutPage() {
             : language === "ID"
             ? "Beranda/Layanan"
             : language === "KR"
-            ? "홈/서비스"
+            ? "홈 / 서비스"
             : "主页/服务"
         }
         button={false}
@@ -50,12 +50,12 @@ export default function AboutPage() {
       <ListSection
         title={
           language === "EN"
-            ? "Why Choose Us"
+            ? "Why Choose Us?"
             : language === "ID"
-            ? "Kenapa Memilih Kami"
+            ? "Kenapa Memilih Kami?"
             : language === "KR"
-            ? "왜 우리를 선택해야 하는가"
-            : "为什么选择我们"
+            ? "왜우리를 선택해야 하나요?"
+            : "为什么选择我们?"
         }
         data={
           language === "EN"

@@ -39,6 +39,13 @@ const navItems_CN = [
   { label: "联系我们", href: "/about#contact" },
 ];
 
+const navItems_KR = [
+  { label: "홈", href: "/" },
+  { label: "회사소개", href: "/about" },
+  { label: "서비스", href: "/services" },
+  { label: "문의", href: "/about#contact" },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [language] = useAtom(languageAtom);

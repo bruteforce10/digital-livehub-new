@@ -1,4 +1,4 @@
-export const BENEFIT_TITLE_EN = "Why Indonesia is Your Next Big Opportunity";
+export const BENEFIT_TITLE_EN = "Why Indonesia is Your Next Big Opportunity?";
 export const BENEFIT_EN = [
   {
     value: "4th",
@@ -39,7 +39,7 @@ export const BENEFIT_EN = [
 ];
 
 export const BENEFIT_TITLE_ID =
-  "Mengapa Indonesia Adalah Peluang Besar Anda Berikutnya";
+  "Mengapa Indonesia Adalah Peluang Besar Anda Berikutnya?";
 
 export const BENEFIT_ID = [
   {
@@ -80,7 +80,7 @@ export const BENEFIT_ID = [
   },
 ];
 
-export const BENEFIT_TITLE_CN = "为什么印尼是您的下一个重大机遇";
+export const BENEFIT_TITLE_CN = "为什么印尼是您的下一个重大机遇?";
 
 export const BENEFIT_CN = [
   {
@@ -121,11 +121,11 @@ export const BENEFIT_CN = [
   },
 ];
 
-export const BENEFIT_TITLE_KR = "인도네시아가 당신의 다음 큰 기회인 이유";
+export const BENEFIT_TITLE_KR = "왜 인도네시아가 당신의 다음 성장 기회인가요 ?";
 
 export const BENEFIT_KR = [
   {
-    value: "4th",
+    value: "4 위 인구 대국",
     label: "세계의 4번째 인구군",
     desktop: {
       className:
@@ -135,7 +135,7 @@ export const BENEFIT_KR = [
   },
   {
     value: "$1.3T",
-    label: "가장 총은 쇼핑마켓",
+    label: "세계에서 가장 빠르게 성장하는 이커머스 시장",
     desktop: {
       className:
         "-right-8 top-32 absolute bg-gradient-to-b from-white/80 via-white/50 to-white/10 rounded-lg px-8 py-4 backdrop-blur-lg",
@@ -153,7 +153,7 @@ export const BENEFIT_KR = [
   },
   {
     value: "게이트웨이",
-    label: "동남아시아 시장으로의 관문",
+    label: "동남아 시장 진출의 관문",
     desktop: {
       className:
         "bottom-12 right-32 absolute bg-gradient-to-b from-white/80 via-white/50 to-white/10 rounded-lg px-8 py-4 backdrop-blur-lg",

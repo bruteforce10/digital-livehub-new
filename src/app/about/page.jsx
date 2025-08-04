@@ -22,12 +22,12 @@ export default function AboutPage() {
       <ListSection
         title={
           language === "EN"
-            ? "Why Drive Us"
+            ? "Why Choose Us?"
             : language === "ID"
             ? "Mengapa Memilih Kami"
             : language === "CN"
             ? "为什么选择我们"
-            : "선택해야 하는 이유"
+            : "왜우리를 선택해야 하나요?"
         }
         data={
           language === "EN"

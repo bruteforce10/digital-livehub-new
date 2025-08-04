@@ -93,26 +93,29 @@ export const SOLVE_CN = [
 
 export const SOLVE_KR = [
   {
-    title: "전통 모델",
+    title: "기존 모델의 한계",
     titleClass: "",
     cardClass: "p-6",
     items: [
-      { text: "유통 또는 마케팅 중 하나를 선택해야 함" },
-      { text: "다수의 공급업체, 복잡한 조정" },
-      { text: "시장 진입이 느리고 초기 비용이 높음" },
-      { text: "문화적 차이, 규제 위험" },
+      { text: "유통과 마케팅 중 하나만 선택해야 함" },
+      { text: "여러 파트너와의 복잡한 조율 필요" },
+      { text: "느린 시장 진입 , 높은 초기 비용" },
+      { text: "문화적 차이 및 예상치 못한 규제 리스크" },
     ],
     isAfter: false,
   },
   {
-    title: "Digital LiveHub",
+    title: "디지털 라이브허브",
     titleClass: "text-transparent bg-clip-text",
     cardClass: "p-6 bg-pink-50 border-pink-200",
     items: [
-      { text: "유통 + 마케팅 통합", icon: true },
-      { text: "단일 파트너, 원활한 실행", icon: true },
-      { text: "빠른 시장 진입, 즉각적인 ROI", icon: true },
-      { text: "현지 전문성, 예기치 않은 위험 없음", icon: true },
+      { text: "유통 + 마케팅의 통합 솔루션 제공", icon: true },
+      { text: "단일 파트너를 통한 원활한 실행", icon: true },
+      { text: "빠른 시장 진입과 즉각적인 ROI", icon: true },
+      {
+        text: "현지에 대한 깊은 이해와 실행력,  문화적 규제적 리스크 최소화",
+        icon: true,
+      },
     ],
     isAfter: true,
   },

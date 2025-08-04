@@ -3,7 +3,7 @@ export const TABLE_TITLE_ID =
   "Kebanyakan Mitra Memaksa Anda Memilih. Kami Tidak";
 export const TABLE_TITLE_CN = "大多数合作伙伴迫使您做出选择。我们不这样做";
 export const TABLE_TITLE_KR =
-  "대부분의 파트너는 선택을 강요합니다. 우리는 그렇지 않습니다";
+  "대부분의 파트너는 선택을 강요하지만 , 우리는 둘 다 제공합니다";
 
 export const TABLE_EN = [
   {
@@ -129,7 +129,7 @@ export const TABLE_KR = [
     boxClass:
       "text-center bg-gray-200 p-6 border-black border-[1.5px] max-md:border-b-0 md:border-r-0",
     items: [
-      { text: "제품만 이동" },
+      { text: "제품만 유통" },
       { text: "마케팅 지원 없음" },
       { text: "시장 통찰력 제한" },
     ],
@@ -143,12 +143,12 @@ export const TABLE_KR = [
     items: [
       { text: "화제성만 창출" },
       { text: "물류 없음" },
-      { text: "이행 능력 없음" },
+      { text: "이행 역량 부족" },
     ],
     isHub: false,
   },
   {
-    title: "Digital LiveHub",
+    title: "디지털 라이브허브",
     titleClass: "text-pink-600",
     boxClass:
       "text-center bg-pink-50 p-6 border-pink-500 border-[1.5px] mx-auto w-full",

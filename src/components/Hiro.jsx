@@ -39,7 +39,9 @@ export default function Hiro({
                 ? "GET STARTED"
                 : language === "ID"
                 ? "MULAI SEKARANG"
-                : "开始"}
+                : language === "CN"
+                ? "开始"
+                : "시작"}
             </Button>
           </Link>
         )}

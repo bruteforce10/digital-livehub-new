@@ -39,7 +39,7 @@ export default function HiroAbout() {
               ? "Bertemu Tim"
               : language === "CN"
               ? "认识团队"
-              : "팀 소개"}
+              : "팀멤버를소개합니다"}
             <br />
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl">
