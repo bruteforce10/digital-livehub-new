@@ -23,7 +23,7 @@ export default function CTASection({ title, desc, link, language }) {
               ? "MULAI SEKARANG"
               : language === "KR"
               ? "시작하기"
-              : "시작"}
+              : "开始"}
           </Button>
         </Link>
       </div>

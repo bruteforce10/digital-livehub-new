@@ -21,7 +21,7 @@ export default function Hiro({
         suppressHydrationWarning
       >
         <h1
-          className="text-5xl md:text-6xl font-bold leading-normal text-transparent bg-clip-text mb-6"
+          className="text-3xl md:text-6xl font-bold leading-normal text-transparent bg-clip-text mb-6"
           style={{
             backgroundImage:
               "linear-gradient(45deg, #E96E4D 0%, #D4346A 52%, #644B86 100%)",
