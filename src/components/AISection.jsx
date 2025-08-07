@@ -11,7 +11,7 @@ const AISection = () => {
     <div className="container mx-auto px-4 grid grid-cols-1 py-20 lg:grid-cols-2 lg:gap-8 items-center">
       <div className=" max-lg:text-center lg:order-1 order-2">
         <h2
-          className="text-5xl font-bold leading-normal text-transparent bg-clip-text mb-6"
+          className="text-3xl font-bold leading-normal text-transparent bg-clip-text mb-6"
           style={{
             backgroundImage:
               "linear-gradient(45deg, #E96E4D 0%, #D4346A 52%, #644B86 100%)",

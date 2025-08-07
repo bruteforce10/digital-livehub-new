@@ -58,17 +58,17 @@ export const WHYDATA_CN = [
   {
     icon: "/why/local.svg",
     title: "本地化执行",
-    desc: "无文化或法规障碍",
+    desc: "零文化或监管壁垒",
   },
   {
     icon: "/why/fast.svg",
     title: "快速投资回报",
-    desc: "第一天就开始销售",
+    desc: "即日启动销售",
   },
   {
     icon: "/why/scale.svg",
-    title: "扩展支持",
-    desc: "可拓展至马来西亚、新加坡、泰国",
+    title: "规模化支持",
+    desc: "即刻拓展至马来西亚、新加坡、泰国市场",
   },
 ];
 

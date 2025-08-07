@@ -30,7 +30,7 @@ const PackageSection = () => {
             ? "Pilihan Paket Pertumbuhan"
             : language === "KR"
             ? "성장 경로 선택"
-            : "选择成长路径"}
+            : "开启您的成长路径"}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">

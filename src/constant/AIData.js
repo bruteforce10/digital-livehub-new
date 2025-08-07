@@ -5,15 +5,16 @@ export const AIDATA_EN = {
 };
 
 export const AIDATA_ID = {
-  title: "Memberdayakan Potensi Manusia dengan AI",
+  title:
+    "Kami percaya AI bukan buat menggantikan posisi manusia, tapi untuk bantu manusia jadi lebih hebat.",
   description:
-    "Kami dengan bangga memposisikan diri sebagai kekuatan AI, bukan untuk menggantikan peran manusia, tetapi untuk memberdayakannya. Di inti kami, kami percaya teknologi harus memperkuat potensi manusia, bukan menghilangkannya. Itulah sebabnya AI diintegrasikan ke dalam semua tim kami—bukan sebagai pengganti, tetapi sebagai asisten yang kuat. Ini membantu kami bekerja lebih cepat, berpikir lebih cerdas, dan memperluas jangkauan kami—dari merampingkan operasi hingga memberikan wawasan yang lebih tajam dan membuka peluang baru. Sinergi antara kreativitas manusia dan efisiensi AI ini menjaga kami tetap gesit, relevan, dan terdepan di pasar yang terus berkembang.",
+    "Buat kami, teknologi itu harusnya nambahin kekuatan, bukan ngurangin peran. Makanya, kami tanamkan AI di setiap tim—bukan buat gantiin orang, tapi jadi asisten yang bisa diandalkan. Dengan bantuan AI, kerja jadi lebih cepat, ide makin tajam, dan peluang baru bisa lebih mudah dijangkau. Mulai dari bikin proses kerja lebih efisien, sampai memberikan insight yang gak kepikiran sebelumnya. Gabungan antara kreativitas manusia dan kecepatan AI ini yang bikin kami tetap lincah, relevan, dan selangkah lebih maju di dunia yang terus berubah.",
 };
 
 export const AIDATA_CN = {
-  title: "用AI赋能人类潜力",
+  title: "以AI赋能人类潜能",
   description:
-    "我们自豪地将自己定位为AI强国，不是为了取代人类角色，而是为了赋能他们。在我们的核心，我们相信技术应该放大人类潜力，而不是消除它。这就是为什么AI被整合到我们所有的团队中——不是作为替代品，而是作为一个强大的助手。它帮助我们更快地工作，更聪明地思考，并扩展我们的影响力——从简化操作到提供更敏锐的洞察力和解锁新的机会。这种人类创造力与AI效率之间的协同作用使我们在不断发展的市场中保持敏捷、相关和领先。",
+    "我们自豪地定位为AI技术引擎——并非取代人力，而是为其赋能。秉持技术应放大而非削弱人类潜能的核心理念，我们将AI深度融入所有团队：它不是替代者，而是强力助手。从高效流程优化到精准洞察生成，再到新机遇挖掘，AI帮助我们更快执行、更智决策、更广触达。这种人机协作的共生关系，正推动我们在瞬息万变的市场中保持敏捷、持续领先。",
 };
 
 export const AIDATA_KR = {

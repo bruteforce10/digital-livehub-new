@@ -1,6 +1,6 @@
 export const TABLE_TITLE_EN = "Most Partners Force You to Choose. We Don't";
 export const TABLE_TITLE_ID =
-  "Kebanyakan Mitra Memaksa Anda Memilih. Kami Tidak";
+  "Kebanyakan Mitra lain memaksa untuk pilih satu, kami berikan semua nya.";
 export const TABLE_TITLE_CN = "大多数合作伙伴迫使您做出选择。我们不这样做";
 export const TABLE_TITLE_KR =
   "대부분의 파트너는 선택을 강요하지만 , 우리는 둘 다 제공합니다";
@@ -53,7 +53,7 @@ export const TABLE_ID = [
     items: [
       { text: "Hanya memindahkan produk" },
       { text: "Tanpa dukungan pemasaran" },
-      { text: "Wawasan pasar terbatas" },
+      { text: "Minim Insight soal market" },
     ],
     isHub: false,
   },
@@ -90,21 +90,21 @@ export const TABLE_CN = [
     boxClass:
       "text-center bg-gray-200 p-6 border-black border-[1.5px] max-md:border-b-0 md:border-r-0",
     items: [
-      { text: "只负责产品运输" },
+      { text: "仅限货物周转" },
       { text: "无营销支持" },
       { text: "市场洞察有限" },
     ],
     isHub: false,
   },
   {
-    title: "营销代理公司",
+    title: "传统营销机构",
     titleClass: "",
     boxClass:
       "text-center bg-gray-200 p-6 border-black border-[1.5px] max-md:border-b-0 md:border-r-0",
     items: [
-      { text: "只制造话题热度" },
-      { text: "没有物流服务" },
-      { text: "不具备履单能力" },
+      { text: "仅造势不落地" },
+      { text: "无物流支持" },
+      { text: "无履约能力" },
     ],
     isHub: false,
   },
@@ -114,8 +114,8 @@ export const TABLE_CN = [
     boxClass:
       "text-center bg-pink-50 p-6 border-pink-500 border-[1.5px] mx-auto w-full",
     items: [
-      { text: "创造需求 + 满足需求", icon: true },
-      { text: "端到端执行", icon: true },
+      { text: "需求创造 + 即时履约", icon: true },
+      { text: "全链路执行", icon: true },
       { text: "可持续增长", icon: true },
     ],
     isHub: true,

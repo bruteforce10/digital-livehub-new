@@ -8,9 +8,9 @@ export const HIRO_EN = [
 
 export const HIRO_ID = [
   {
-    title: "Mengubah Cara Masuk Pasar",
-    subtitle: "untuk Asia Tenggara",
-    desc: "Digital Live Hub menggabungkan distribusi yang lancar dan pemasaran performa untuk membantu merek global menang di Indonesia",
+    title: "Strategi Masuk Asia Tenggara ",
+    subtitle: "yang Lebih Relevan dan Kekinian",
+    desc: "Digital Livehub bantu brand global makin mudah berkembang di Indonesia lewat distribusi yang lancar dan pemasaran yang tepat sasaran.",
   },
 ];
 
@@ -18,7 +18,7 @@ export const HIRO_CN = [
   {
     title: "重新定义市场进入",
     subtitle: "东南亚",
-    desc: "Digital Live Hub 结合无缝分销和绩效营销，帮助全球品牌在印度尼西亚获胜",
+    desc: "Digital Live Hub 无缝结合销和绩效营销，帮助全球品牌在印度尼西亚获胜",
   },
 ];
 

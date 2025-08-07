@@ -25,7 +25,7 @@ export default function ListBenefitSection() {
             ? "Strategi Digital & Eksekusi"
             : language === "KR"
             ? "디지털 전략 및 실행"
-            : "数字战略与执行"}
+            : "数字化战略与执行"}
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">

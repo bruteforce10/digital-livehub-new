@@ -94,7 +94,7 @@ export const BENEFIT_CN = [
   },
   {
     value: "$1.3万亿",
-    label: "增长最快的电商市场",
+    label: "最快电商增速",
     desktop: {
       className:
         "-right-8 top-32 absolute bg-gradient-to-b from-white/80 via-white/50 to-white/10 rounded-lg px-8 py-4 backdrop-blur-lg",
@@ -103,7 +103,7 @@ export const BENEFIT_CN = [
   },
   {
     value: "1.7亿+",
-    label: "月活跃互联网与社交媒体用户",
+    label: "月度互联网及社交媒体用户数",
     desktop: {
       className:
         "bottom-24 left-0 absolute bg-gradient-to-b from-white/80 via-white/50 to-white/10 rounded-lg px-8 py-4 backdrop-blur-lg",

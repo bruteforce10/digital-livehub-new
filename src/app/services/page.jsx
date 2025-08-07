@@ -34,7 +34,7 @@ export default function AboutPage() {
             ? "Temukan Kekuatan Layanan Kami"
             : language === "KR"
             ? "우리 서비스의 강점을 확인해보세요"
-            : "发现我们的服务力量"
+            : "发掘我们服务的强大潜能"
         }
         desc={
           language === "EN"
@@ -99,7 +99,7 @@ export default function AboutPage() {
             ? "Siap Menjadi Bagian dari Sesuatu yang Besar?"
             : language === "KR"
             ? "큰 일의 일부가 될 준비가 되셨습니까?"
-            : "准备成为大事的一部分吗?"
+            : "准备好成就非凡了吗？"
         }
         language={language}
         link={"/about#contact"}

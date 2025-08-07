@@ -107,7 +107,7 @@ export default function FooterSection() {
                     : language === "ID"
                     ? "Paket"
                     : language === "CN"
-                    ? "套餐"
+                    ? "服务配套"
                     : "패키지"}
                 </Link>
               </li>
@@ -118,7 +118,7 @@ export default function FooterSection() {
                     : language === "ID"
                     ? "Program Kami"
                     : language === "CN"
-                    ? "我们的项目"
+                    ? "专项计划"
                     : "프로그램"}
                 </Link>
               </li>

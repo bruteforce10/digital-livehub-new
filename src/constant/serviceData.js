@@ -25,7 +25,8 @@ export const SERVICE_EN = [
   },
 ];
 
-export const SERVICE_TITLE_ID = "Pasangan Tunggal Anda untuk Asia Tenggara";
+export const SERVICE_TITLE_ID =
+  "Partner andalan anda untuk ekspansi ke Asia Tenggara";
 
 export const SERVICE_ID = [
   {
@@ -52,24 +53,24 @@ export const SERVICE_ID = [
   },
 ];
 
-export const SERVICE_TITLE_CN = "东南亚您唯一需要的合作伙伴";
+export const SERVICE_TITLE_CN = "东南亚，您唯一需要的合作伙伴";
 
 export const SERVICE_CN = [
   {
     image: "/service/distribution.png",
     alt: "分销",
-    title: "分销强力支持",
-    items: ["主要注册与合规", "进口、海关与清关", "仓储与履行", "全渠道分销"],
+    title: "分销巨头",
+    items: ["首要注册与合规", "进口报关与清关", "仓储与履约", "全渠道分销"],
   },
   {
     image: "/service/marketing.png",
     alt: "营销",
     title: "营销加速器",
     items: [
-      "创意内容与社交媒体",
-      "付费与影响力营销",
+      "创意内容与社交媒体运营",
+      "付费与网红营销活动",
       "SEO与内容营销",
-      "直播与联盟网络",
+      "直播与联盟营销网络",
     ],
   },
 ];

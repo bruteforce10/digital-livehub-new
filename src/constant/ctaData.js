@@ -11,8 +11,8 @@ export const CTADATA_ID = {
 };
 
 export const CTADATA_CN = {
-  title: "准备好无猜测地进入东南亚市场了吗？",
-  desc: "让我们探索您的品牌如何在印度尼西亚和东南亚取得成功",
+  title: "准备好进入东南亚市场？",
+  desc: "探索您的品牌如何在印尼及东南亚市场取得成功",
   link: "/services#packages",
 };
 

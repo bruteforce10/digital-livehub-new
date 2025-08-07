@@ -15,8 +15,8 @@ export const NEWSLETTER_ID = {
 };
 
 export const NEWSLETTER_CN = {
-  title: "订阅我们的新闻通讯",
-  description: "订阅关于印度尼西亚和东南亚最新机会的更新、提示和趋势",
+  title: "订阅我们的新闻简报",
+  description: "订阅获取印尼及东南亚最新商机趋势",
   placeholder: "输入您的电子邮件",
   buttonText: "订阅",
 };

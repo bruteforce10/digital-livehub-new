@@ -1,6 +1,6 @@
 export const ENDTOENDATA_TITLE_EN = "End-to-End Market Launch & Growth Support";
 export const ENDTOENDATA_TITLE_ID =
-  "Dukungan Peluncuran & Pertumbuhan Pasar End-to-End";
+  "Dukungan peluncuran & pertumbuhan market secara end-to-end";
 export const ENDTOENDATA_TITLE_CN = "端到端市场启动与增长支持";
 export const ENDTOENDATA_TITLE_KR = "엔드 투 엔드 시장 출시 및 성장 지원";
 
@@ -83,7 +83,7 @@ export const ENDTOENDATA_CN = [
     title: "合规与运营",
     items: [
       "品牌注册与清真认证",
-      "进口许可与税务设置",
+      "进口许可与税务设立",
       "仓储与库存管理",
       "订单处理与客户服务",
     ],

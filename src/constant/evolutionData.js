@@ -1,6 +1,6 @@
 export const EVOLUTION_TITLE_EN = "Company Evolution Timeline";
 export const EVOLUTION_TITLE_ID = "Evolusi Perusahaan";
-export const EVOLUTION_TITLE_CN = "公司演化时间轴";
+export const EVOLUTION_TITLE_CN = "公司发展历程时间轴";
 export const EVOLUTION_TITLE_KR = "회사성장연혁";
 
 export const EVOLUTION_EN = [

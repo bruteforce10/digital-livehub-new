@@ -73,7 +73,7 @@ const DISTRIBUTION_DATA = {
   },
   CN: {
     title: "分销网络",
-    subtitle: "印度尼西亚全面覆盖",
+    subtitle: "印度尼西亚全域覆盖",
     sections: [
       {
         image: "/marketplace.png",

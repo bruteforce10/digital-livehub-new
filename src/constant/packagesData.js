@@ -33,7 +33,7 @@ export const PACKAGES_EN = [
 
 export const PACKAGES_ID = [
   {
-    name: "Paket Masuk Pasar",
+    name: "Paket Masuk Market",
     features: [
       "Registrasi merek",
       "Penyiapan marketplace dasar",
