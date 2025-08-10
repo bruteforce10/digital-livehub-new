@@ -74,7 +74,9 @@ export default function Navbar() {
                 ? navItems_EN
                 : language === "ID"
                 ? navItems_ID
-                : navItems_CN
+                : language === "CN"
+                ? navItems_CN
+                : navItems_KR
             }
             render={(item) => (
               <Link
@@ -120,7 +122,9 @@ export default function Navbar() {
                       ? navItems_EN
                       : language === "ID"
                       ? navItems_ID
-                      : navItems_CN
+                      : language === "CN"
+                      ? navItems_CN
+                      : navItems_KR
                   }
                   render={(item) => (
                     <Link
@@ -150,6 +154,8 @@ export default function Navbar() {
                       ? "Contact Us"
                       : language === "ID"
                       ? "Hubungi Kami"
+                      : language === "KR"
+                      ? "문의하기"
                       : "联系我们"}
                   </Button>
                 </div>
