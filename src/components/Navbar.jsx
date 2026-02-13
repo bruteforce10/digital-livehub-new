@@ -12,8 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu, Globe } from "lucide-react";
 import Link from "next/link";
-import LogoDigitalLiveHub from "../../public/logo.svg";
-import SwitchLanguage from "./SwitchLanguage";
+import SwitchLanguage from "./SwitchLanguage"; // logo served from /public — use <img /> to be Turbopack-safe
 import { languageAtom } from "@/lib/languageAtom";
 import { useAtom } from "jotai";
 import EachUtils from "@/lib/EachUtils";
@@ -64,7 +63,7 @@ export default function Navbar() {
         suppressHydrationWarning
       >
         <div className="flex items-center space-x-2">
-          <LogoDigitalLiveHub className="w-36 h-auto" />
+          <img src="/logo.svg" alt="Digital LiveHub" className="w-36 h-auto" />
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">

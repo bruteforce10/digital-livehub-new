@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Explicitly set an (empty) Turbopack config so Next.js won't warn when
+  // a custom `webpack` field is present. Turbopack will remain enabled by
+  // default — this only silences the migration notice.
+  turbopack: {},
+
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>

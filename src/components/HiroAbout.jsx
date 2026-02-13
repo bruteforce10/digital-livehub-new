@@ -36,20 +36,20 @@ export default function HiroAbout() {
             {language === "EN"
               ? "Meet the team"
               : language === "ID"
-              ? "Bertemu Tim"
-              : language === "CN"
-              ? "认识团队"
-              : "팀멤버를소개합니다"}
+                ? "Bertemu Tim"
+                : language === "CN"
+                  ? "认识团队"
+                  : "팀멤버를소개합니다"}
             <br />
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl">
             {language === "EN"
               ? "Home/About Us"
               : language === "ID"
-              ? "Beranda/Tentang Kami"
-              : language === "CN"
-              ? "主页/关于我们"
-              : "홈/회사 소개"}
+                ? "Beranda/Tentang Kami"
+                : language === "CN"
+                  ? "主页/关于我们"
+                  : "홈/회사 소개"}
           </p>
         </div>
         <div className="order-1 md:order-2">
@@ -62,7 +62,7 @@ export default function HiroAbout() {
             ]}
           >
             <CarouselContent>
-              {[1, 2, 3, 4].map((item) => (
+              {[2, 3, 4].map((item) => (
                 <CarouselItem
                   key={item}
                   className={"flex justify-center items-center"}

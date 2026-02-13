@@ -1,7 +1,6 @@
 "use client";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-import LogoDigitalLiveHub from "../../public/logo.svg";
-import Link from "next/link";
+import Link from "next/link"; // logo served from /public — use <img /> to be Turbopack-safe
 import { useAtom } from "jotai";
 import { languageAtom } from "@/lib/languageAtom";
 
@@ -82,7 +81,7 @@ export default function FooterSection() {
       <div className="container mx-auto px-4" suppressHydrationWarning>
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-6">
-            <LogoDigitalLiveHub className="w-36 h-auto" />
+            <img src="/logo.svg" alt="Digital LiveHub" className="w-36 h-auto" />
             <div className="flex space-x-4">
               <Facebook className="w-5 h-5 text-gray-400 hover:text-pink-600 cursor-pointer" />
               <Instagram className="w-5 h-5 text-gray-400 hover:text-pink-600 cursor-pointer" />
